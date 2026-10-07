@@ -6,11 +6,65 @@
         <meta name ="description" content="Esta página es el portfolio personal de Borja.">
         <link href="css/style.css" rel="stylesheet">
         <title>Portafolio</title>
+
+        <!-- Dock lateral -->
+
+        <nav>
+            <ul>
+                <li>
+                    <a href="#biografia" aria-label="Biografia">
+                        <img
+                        src="img/icon/cv-icon.webp"
+                        alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#stack" aria-label="Stack">
+                        <img
+                        src="img/icon/tools-icon.webp"
+                        alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#proyectos" aria-label="Proyectos">
+                        <img
+                        src="img/icon/management-icon.webp"
+                        alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#contacto" aria-label="Contacto">
+                        <img
+                        src="img/icon/contact-icon.webp"
+                        alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#calendario" aria-label="Calendario">
+                        <img
+                        src="img/icon/calendar-icon.webp"
+                        alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#proximamente" aria-label="Proximamente">
+                        <img
+                        src="img/icon/coming-soon-icon.webp"
+                        alt="">
+                    </a>
+                </li>
+            </ul>
+        </nav>
     </head>
     <body>
         <main>
+
             <!-- Biografia -->
-            <section>
+
+            <section
+            class="portafolio-biografia"
+                id="biografia"
+            >
                 <img
                 class="photo-perfil"
                 src="img/perfil/Borja.webp"
@@ -55,7 +109,13 @@
                 </p>
 
             </section>
-            <section>
+
+            <!-- Stack -->
+
+            <section
+                class="portafolio-stack"
+                id="stack"
+            >
                 <h2>
                     Stack
                 </h2>
@@ -169,7 +229,13 @@
 
                 </div>
             </section>
-            <section>
+
+            <!-- Proyectos -->
+
+            <section
+                class="portafolio-proyectos"
+                id="proyectos"
+            >
                 <h2>Proyectos</h2>
                     <div class="project-general">
                         <article>
@@ -204,29 +270,35 @@
                         </article>
                     </div>
             </section>
-            <section>
+
+            <!-- Contacto -->
+
+            <section
+                class="portafolio-contacto"
+                id="contacto"
+            >
                 <h2>Contacto</h2>
                 <p>
                     Si quieres contactar conmigo, puedes hacerlo por cualquiera de estos canales.
                 </p>
                 <div class="contact-links">
-                    
+
                     <a href="mailto:borjalljose@gmail.com">
-                        <img 
-                        src="img/icon/mail-icon.webp"
+                        <img
+                        src="img/icon/gmail-icon.webp"
                         alt="">
                         <span>Gmail</span>
                     </a>
 
                     <a href="https://www.linkedin.com/in/borja-lopez-963103434/">
-                        <img 
+                        <img
                         src="img/stack/linkedin-icon.webp"
                         alt="">
                         <span>LinkedIn</span>
                     </a>
 
                     <a href="https://wa.me/34638276779">
-                        <img 
+                        <img
                         src="img/icon/whatsapp-icon.webp"
                         alt="">
                         <span>WhatsApp</span>
@@ -234,6 +306,148 @@
 
                 </div>
             </section>
+
+            <!-- Calendario -->
+
+            <section
+                class="portafolio-calendario"
+                id="calendario"
+            >
+                <h2>
+                    Calendario
+                </h2>
+                <p>
+                    Aquí muestro mi trayectoria de estudios, está en constante evolución
+                </p>
+                <div class="timeline-panel">
+
+                    <div class="timeline-years">
+                        <span>2023</span>
+                        <span>2024</span>
+                        <span>2025</span>
+                        <span>Hoy</span>
+                    </div>
+
+                    <div class="timeline-grid">
+
+                        <div class="timeline-row-label">Estudios</div>
+                        <div class="timeline-row"></div>
+
+                        <div class="timeline-row-label">Web y aprendizaje</div>
+                        <div class="timeline-row"></div>
+
+                        <div class="timeline-row-label">Certificaciones</div>
+                        <div class="timeline-row"></div>
+
+                        <div class="timeline-row-label">Trabajo</div>
+                        <div class="timeline-row"></div>
+
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- Próximamente -->
+
+            <section
+                class="portafolio-proximamente"
+                id="proximamente"
+            >
+            <h2>
+                Mi aprendizaje
+            </h2>
+            <p>
+                Estas son las tecnologías que me apasionan y que estoy explorando activamente.
+                Algunas ya las estoy aplicando en proyectos, mientras que otras están en mi hoja de ruta cercana.
+            </p>
+            <div class="tabla-aprendizaje">
+                
+                <section>
+                    <header>
+                        <span class="circle-learning learning-blue"></span>
+                        <h3 id="intermedioTitulo">Intermedio</h3>
+                        <span>Base sólida</span>
+                    </header>
+
+                    <div class="cards-learning">
+                        <article class="learning-card">
+                            <img src="img/stack/html5-icon.webp" alt="">
+                            <h4>HTML</h4>
+                        </article>
+                        <article class="learning-card">
+                            <img src="img/stack/css-icon.webp" alt="">
+                            <h4>CSS</h4>
+                        </article>
+                        <article class="learning-card">
+                            <img src="img/stack/github-icon.webp" alt="">
+                            <h4>GitHub</h4>
+                        </article>
+                        <article class="learning-card">
+                            <img src="img/stack/javascript-icon.webp" alt="">
+                            <h4>JavaScript</h4>
+                        </article>
+                    </div>
+                </section>
+                <section>
+                    <header>
+                        <span class="circle-learning learning-blue"></span>
+                        <h3 id="basicoTitulo">Básico</h3>
+                        <span>Aprendiendo y practicando</span>
+                    </header>
+
+                    <div class="cards-learning">
+                        <article class="learning-card">
+                            <img src="img/stack/java-icon.webp" alt="">
+                            <h4>Java</h4>
+                        </article>
+                        <article class="learning-card">
+                            <img src="img/stack/mysql-icon.webp" alt="">
+                            <h4>MySQL</h4>
+                        </article>
+                        <article class="learning-card">
+                            <img src="img/stack/docker-icon.webp" alt="">
+                            <h4>Docker</h4>
+                        </article>
+                        <article class="learning-card">
+                            <img src="img/stack/ia-icon.webp" alt="">
+                            <h4>IA OpenCode</h4>
+                        </article>
+                    </div>
+                </section>
+                                <section>
+                    <header>
+                        <span class="circle-learning learning-blue"></span>
+                        <h3 id="rutaTitulo">En la hoja de ruta</h3>
+                        <span>Próximos pasos</span>
+                    </header>
+
+                    <div class="cards-learning">
+                        <article class="learning-card">
+                            <img src="img/stack/angular-icon.webp" alt="">
+                            <h4>Angular</h4>
+                        </article>
+                        <article class="learning-card">
+                            <img src="img/stack/react-icon.webp" alt="">
+                            <h4>React</h4>
+                        </article>
+                        <article class="learning-card">
+                            <img src="img/stack/python-icon.webp" alt="">
+                            <h4>Python</h4>
+                        </article>
+                        <article class="learning-card">
+                            <img src="img/stack/typescript-icon.webp" alt="">
+                            <h4>TypeScript</h4>
+                        </article>
+                        <article class="learning-card">
+                            <img src="img/stack/postgresql-icon.webp" alt="">
+                            <h4>PostgreSQL</h4>
+                        </article>
+                    </div>
+                </section>
+
+            </div>
+            </section>
+
         </main>
 
     </body>
