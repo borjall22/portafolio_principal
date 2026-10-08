@@ -1,0 +1,296 @@
+/* ==================================================
+   1. BASE GENERAL
+   ================================================== */
+    /*Variables generales*/
+
+    :root{
+        --fondo-principal:#0b1118;
+        --fondo-portfolio: radial-gradient(
+            ellipse closest-side at 50% 45%,
+            rgba(85, 126, 139, 0.24),
+            rgba(85, 126, 139, 0)
+            ), var(--fondo-principal);
+
+        --texto-principal: #f5f5f7;
+        --texto-secundario:#a9b4c2;
+
+        --fondo-tarjetas:rgba(255, 255, 255, 0.035);
+        --borde-suave:rgba(255, 255, 255, 0.09);
+
+        --acento:#a4c1ca;
+    }
+
+
+    /*Modelo de caja*/
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    /*Documento*/
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        margin: 0;
+        overflow-x: hidden;
+        background: var(--fondo-portfolio);
+        background-attachment: fixed;
+        color: var(--texto-principal);
+        font-family: 
+            -apple-system, 
+            BlinkMacSystemFont,
+            "SF Pro Display",
+            "Segoe UI",
+            Helvetica, 
+            Arial, 
+            sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        
+    }
+
+/* ==================================================
+   2. PORTFOLIO
+   ================================================== */
+
+   /* Fondo y superficie generales del portafolio */
+
+   .pantalla-transicion{
+        width: 100%;
+        min-height: 100svh;
+        display: flex;
+        align-items: safe center;
+        justify-content: center;
+        overflow-x: hidden;
+        overflow-y: auto;
+        padding: 32px;
+   }
+
+   /* Contenedor general del portafolio */
+
+   .portfolio-intro{
+        width: min(1100px, 90vw);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+   }
+
+   /* ==================================================
+   3. PERFIL
+   ================================================== */
+
+   /* Contenerdor del perfil */
+
+   .portfolio-perfil{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+   }
+
+    /* Foto de perfil */
+
+   .photo-perfil{
+        width: min(22svh, 44vw);
+        height: auto;
+        aspect-ratio: 1 / 1;
+        margin-bottom: 22px;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: center 25%;
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        box-shadow: 
+            0 0 0 8px rgba(255, 255, 255, 0.03),
+            0 18px 50px rgba(0, 0, 0, 0.45);
+   }
+
+   /* Titulo principal */
+
+   .title-perfil{
+        margin: 0;
+        color: var(--texto-principal);
+        font-size: clamp(2.6rem, 6.6vw, 5.6rem);
+        line-height: 0.95;
+        font-weight: 600;
+        letter-spacing: -0.04em;
+   }
+
+    /* Frase bajo el título */
+
+   .portfolio-tagline{
+        width: min(720px, 92vw);
+        margin: 26px 0 0;
+        color: var(--texto-secundario);
+        font-size: clamp(0.95rem, 1.5vw, 1.15rem);
+        line-height: 1.5;
+   }
+
+   /* Biografía */
+
+   .portfolio-bio{
+        width: min(760px, 92vw);
+        margin-top: 38px;
+        display: grid;
+        gap: 0.9em;
+        color: var(--texto-secundario);
+        font-size: clamp(11.5px, 1.7svh, 15px);
+        line-height: 1.6;
+        text-align: left;
+   }
+
+   /* Párrafos de la biografía */
+   .portfolio-bio p {
+        margin: 0;
+   }
+
+   /* ==================================================
+   4. STACK
+   ================================================== */
+
+   /* Contenedor general del Stack */
+
+   .portfolio-stack{
+        width: min(1080px, 92vw);
+        margin-top: 120px;
+        text-align: center;
+   }
+
+   /* Titulo Stack */
+
+   .title-stack{
+        margin: 0;
+        color: var(--texto-principal);
+        font-size: clamp(2.2rem, 5vw, 4.4rem);
+        line-height: 0.095;
+        font-weight: 600;
+        letter-spacing: -0.04em;
+   }
+
+   /* Rejilla grupos */
+
+   .stack-grupos{
+        margin-top: 36px;
+        padding-top: 16px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 22px;
+        border-top: 1px solid var(--borde-suave);
+   }
+
+   /* Grupo individual */
+
+   .stack-grupo{
+        padding: 12px;
+        border: 1px solid var(--borde-suave);
+        background: rgba(255, 255, 255, 0.025);
+        box-shadow:
+            inset 0 1px 0 rgba(255, 255, 255, 0.03)
+            0 16px 40px rgba(0, 0, 0, 0.18);
+        backdrop-filter: blur(14px);
+   }
+
+   /* Título de cada grupo */
+
+   .stack-grupo h3{
+        margin: 0 0 12px;
+        padding: 10px 12px;
+        border-left: 3px solid var(--acento);
+        background: linear-gradient(
+            90deg,
+            rgba(164, 193, 202, 0.10),
+            rgba(164, 193, 202, 0)
+        );
+        color:var(--texto-principal);
+        font-size: 13.5px;
+        letter-spacing: 0.13em;
+        text-align: left;
+        text-transform: uppercase;
+   }
+
+   /* Lista de tecnologías */
+
+   .stack-lista{
+        margin: 0;
+        padding: 0;
+        display: grid;
+        gap: 10px;
+        list-style: none;
+   }
+
+   /* Tarjeta de tecnología */
+
+   .stack-card{
+        min-height: 68px;
+        padding: 13px 14px;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        border: 1px solid var(--borde-suave);
+        background: var(--fondo-tarjetas);
+        box-shadow: 
+            inset 0 1px 0 rgba(255, 255, 255, 0.025),
+            0 10px 24px rgba(0, 0, 0, 0.14);
+        font-size: 15.5px;
+        font-weight: 600;
+        text-align: left;
+        transition:
+            transform 0.2s ease,
+            border-color 0.2s ease,
+            background-color 0,2s ease;
+   }
+
+   /* Efecto al pasar el ratón */
+
+   .stack-card:hover{
+        transform: translateY(-2px);
+        border-color: rgba(164, 193, 202, 0.25);
+        background: rgba(255, 255, 255, 0.055);
+   }
+
+   /* Iconos del Stack */
+
+   .stack-icon{
+        width: 42px;
+        height: 42px;
+        flex: 0 0 auto;
+        object-fit: contain;
+   }
+
+
+
+
+
+   /* ==================================================
+   5. PROYECTOS
+   ================================================== */
+
+   /* ==================================================
+   6. CONTACTO
+   ================================================== */
+
+   /* ==================================================
+   7. CALENDARIO
+   ================================================== */
+
+   /* ==================================================
+   8. MI APRENDIZAJE
+   ================================================== */
+
+   /* ==================================================
+   9. DOCK
+   ================================================== */
+
+   /* ==================================================
+   10. RESPONSIVE
+   ================================================== */
+
+   /* ==================================================
+   11. ACCESIBILIDAD / REDUCED MOTION
+   ================================================== */
+
