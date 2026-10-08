@@ -4,15 +4,20 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1" >
         <meta name ="description" content="Esta página es el portfolio personal de Borja.">
-        <link href="css/style.css" rel="stylesheet">
+        <link href="css/portfolio.css" rel="stylesheet">
+        <link href="css/hero.css" rel="stylesheet">
+
         <title>Portafolio</title>
+
+    </head>
+    <body>
 
         <!-- Dock lateral -->
 
         <nav>
             <ul>
                 <li>
-                    <a href="#biografia" aria-label="Biografia">
+                    <a href="#portfolio" aria-label="Perfil">
                         <img
                         src="img/icon/cv-icon.webp"
                         alt="">
@@ -47,7 +52,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#proximamente" aria-label="Proximamente">
+                    <a href="#proximamente" aria-label="Próximamente">
                         <img
                         src="img/icon/coming-soon-icon.webp"
                         alt="">
@@ -55,399 +60,411 @@
                 </li>
             </ul>
         </nav>
-    </head>
-    <body>
+
         <main>
 
-            <!-- Biografia -->
+            <section class="hero" id="inicio">
+            
+                <div class="hero-sticky">
 
-            <section
-            class="portafolio-biografia"
-                id="biografia"
-            >
-                <img
-                class="photo-perfil"
-                src="img/perfil/Borja.webp"
-                alt="Foto de Borja"
-                width="336"
-                height="336"
-                >
-                <h1>Soy Borja.</h1>
-                <p>
-                    Soy desarrollador junior y estoy buscando una
-                    oportunidad que me permita comenzar mi
-                    trayectoria profesional en el sector
-                    tecnológico.
-                </p>
-                <p>
-                   Me considero una persona autodidacta, curiosa y
-                    con muchas ganas de seguir aprendiendo. Disfruto
-                    enfrentándome a nuevos retos, adquiriendo
-                    conocimientos y mejorando poco a poco con cada
-                    proyecto que desarrollo.
-                </p>
-                <p>
-                    Aunque todavía no cuento con experiencia laboral
-                    en el sector, sí he trabajado en distintos
-                    proyectos personales que me han permitido poner
-                    en práctica mis conocimientos y seguir
-                    desarrollando mis habilidades.
-                </p>
-                <p>
-                    Mi objetivo es especializarme en desarrollo
-                    Front-End, aunque estoy abierto a aprender
-                    nuevas tecnologías y explorar otras áreas del
-                    desarrollo. No me asustan los cambios ni los
-                    nuevos desafíos; al contrario, los veo como una
-                    oportunidad para seguir creciendo tanto
-                    profesional como personalmente.
-                </p>
-                <p>
-                    Busco formar parte de un equipo donde pueda
-                    aportar, aprender de otros profesionales y
-                    continuar evolucionando como desarrollador.
-                </p>
+                    <div class="pantalla-transicion" id="pantallaTransicion">
 
-            </section>
+                <div class="portfolio-intro"
+                    id="portfolio">
 
-            <!-- Stack -->
+                <!-- Biografia -->
 
-            <section
-                class="portafolio-stack"
-                id="stack"
-            >
-                <h2>
-                    Stack
-                </h2>
-                <div class="stack-grupos">
-                    <div class="stack-grupo">
-                        <h3>
-                            Fundamentos
-                        </h3>
-                        <ul class="stack-lista">
-                            <li class="stack-card">
-                                <img class="stack-icon"
-                                src="img/stack/javascript-icon.webp"
-                                alt=""
-                                >
-                                <span>JavaScript</span>
-                            </li>
-                            <li class="stack-card">
-                                <img class="stack-icon"
-                                src="img/stack/html5-icon.webp"
-                                alt=""
-                                >
-                                <span>HTML</span>
-                            </li>
-                            <li class="stack-card">
-                                <img class="stack-icon"
-                                src="img/stack/css-icon.webp"
-                                alt=""
-                                >
-                                <span>CSS</span>
-                            </li>
+                    <section
+                    class="portafolio-perfil"
+                        id="perfil"
+                    >
+                        <img
+                        class="photo-perfil"
+                        src="img/perfil/Borja.webp"
+                        alt="Foto de Borja"
+                        width="336"
+                        height="336"
+                        >
+                        <h1>Soy Borja.</h1>
+                        <p>
+                            Soy desarrollador junior y estoy buscando una
+                            oportunidad que me permita comenzar mi
+                            trayectoria profesional en el sector
+                            tecnológico.
+                        </p>
+                        <p>
+                        Me considero una persona autodidacta, curiosa y
+                            con muchas ganas de seguir aprendiendo. Disfruto
+                            enfrentándome a nuevos retos, adquiriendo
+                            conocimientos y mejorando poco a poco con cada
+                            proyecto que desarrollo.
+                        </p>
+                        <p>
+                            Aunque todavía no cuento con experiencia laboral
+                            en el sector, sí he trabajado en distintos
+                            proyectos personales que me han permitido poner
+                            en práctica mis conocimientos y seguir
+                            desarrollando mis habilidades.
+                        </p>
+                        <p>
+                            Mi objetivo es especializarme en desarrollo
+                            Front-End, aunque estoy abierto a aprender
+                            nuevas tecnologías y explorar otras áreas del
+                            desarrollo. No me asustan los cambios ni los
+                            nuevos desafíos; al contrario, los veo como una
+                            oportunidad para seguir creciendo tanto
+                            profesional como personalmente.
+                        </p>
+                        <p>
+                            Busco formar parte de un equipo donde pueda
+                            aportar, aprender de otros profesionales y
+                            continuar evolucionando como desarrollador.
+                        </p>
 
-                        </ul>
-                    </div>
-                    <div class="stack-grupo">
-                        <h3>
-                            Frameworks
-                        </h3>
-                        <ul class="stack-lista">
-                            <li class="stack-card">
-                                <img class="stack-icon"
-                                src="img/stack/react-icon.webp"
-                                alt=""
-                                >
-                                <span>React</span>
-                            </li>
-                            <li class="stack-card">
-                                <img class="stack-icon"
-                                src="img/stack/angular-icon.webp"
-                                alt=""
-                                >
-                                <span>Angular</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="stack-grupo">
-                        <h3>
-                            Datos
-                        </h3>
-                        <ul class="stack-lista">
-                            <li class="stack-card">
-                                <img class="stack-icon"
-                                src="img/stack/mysql-icon.webp"
-                                alt=""
-                                >
-                                <span>MySQL</span>
-                            </li>
-                            <li class="stack-card">
-                                <img class="stack-icon"
-                                src="img/stack/mongodb-icon.webp"
-                                alt=""
-                                >
-                                <span>MongoDB</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="stack-grupo">
-                        <h3>
-                            Herramientas
-                        </h3>
-                        <ul class="stack-lista">
-                            <li class="stack-card">
-                                <img class="stack-icon"
-                                src="img/stack/git-icon.webp"
-                                alt=""
-                                >
-                                <span>Git</span>
-                            </li>
-                            <li class="stack-card">
-                                <img class="stack-icon"
-                                src="img/stack/github-icon.webp"
-                                alt=""
-                                >
-                                <span>GitHub</span>
-                            </li>
-                            <li class="stack-card">
-                                <img class="stack-icon"
-                                src="img/stack/ia-icon.webp"
-                                alt=""
-                                >
-                                <span>IA</span>
-                            </li>
-                            <li class="stack-card">
-                                <img class="stack-icon"
-                                src="img/stack/docker-icon.webp"
-                                alt=""
-                                >
-                                <span>Docker</span>
-                            </li>
-                        </ul>
-                    </div>
+                    </section>
 
-                </div>
-            </section>
+                    <!-- Stack -->
 
-            <!-- Proyectos -->
+                    <section
+                        class="portafolio-stack"
+                        id="stack"
+                    >
+                        <h2>
+                            Stack
+                        </h2>
+                        <div class="stack-grupos">
+                            <div class="stack-grupo">
+                                <h3>
+                                    Fundamentos
+                                </h3>
+                                <ul class="stack-lista">
+                                    <li class="stack-card">
+                                        <img class="stack-icon"
+                                        src="img/stack/javascript-icon.webp"
+                                        alt=""
+                                        >
+                                        <span>JavaScript</span>
+                                    </li>
+                                    <li class="stack-card">
+                                        <img class="stack-icon"
+                                        src="img/stack/html5-icon.webp"
+                                        alt=""
+                                        >
+                                        <span>HTML</span>
+                                    </li>
+                                    <li class="stack-card">
+                                        <img class="stack-icon"
+                                        src="img/stack/css-icon.webp"
+                                        alt=""
+                                        >
+                                        <span>CSS</span>
+                                    </li>
 
-            <section
-                class="portafolio-proyectos"
-                id="proyectos"
-            >
-                <h2>Proyectos</h2>
-                    <div class="project-general">
-                        <article>
-                            <div class="projects-laVitrina">
-                                <img class="project-lavitrina"
-                                src="img/project/laVitrina.webp"
-                                alt="Vista previa del proyecto LaVitrina"
-                                >
-                                <h3>LaVitrina</h3>
-                                <p>
-                                    LaVitrina es una web para organizar tus colecciones
-                                    y conectar con personas que comparten tus mismos gustos.
-                                </p>
-                                <div class="project-actions">
-                                    <a href="https://borjall22.github.io/La-Vitrina/" aria-label="Visitar la web de LaVitrina">
-                                        <img
-                                        src="img/icon/web-icon.webp"
-                                        alt="">
-                                    </a>
-                                    <a href="https://github.com/borjall22/La-Vitrina" aria-label="Ver LaVitrina en GitHub">
-                                        <img
-                                        src="img/stack/github-icon.webp"
-                                        alt="">
-                                    </a>
-                                    <button type="button" aria-label="Ver más información sobre LaVitrina">
-                                        <img
-                                        src="img/icon/more-icon.webp"
-                                        alt="">
-                                    </button>
-                                </div>
+                                </ul>
                             </div>
-                        </article>
+                            <div class="stack-grupo">
+                                <h3>
+                                    Frameworks
+                                </h3>
+                                <ul class="stack-lista">
+                                    <li class="stack-card">
+                                        <img class="stack-icon"
+                                        src="img/stack/react-icon.webp"
+                                        alt=""
+                                        >
+                                        <span>React</span>
+                                    </li>
+                                    <li class="stack-card">
+                                        <img class="stack-icon"
+                                        src="img/stack/angular-icon.webp"
+                                        alt=""
+                                        >
+                                        <span>Angular</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="stack-grupo">
+                                <h3>
+                                    Datos
+                                </h3>
+                                <ul class="stack-lista">
+                                    <li class="stack-card">
+                                        <img class="stack-icon"
+                                        src="img/stack/mysql-icon.webp"
+                                        alt=""
+                                        >
+                                        <span>MySQL</span>
+                                    </li>
+                                    <li class="stack-card">
+                                        <img class="stack-icon"
+                                        src="img/stack/mongodb-icon.webp"
+                                        alt=""
+                                        >
+                                        <span>MongoDB</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="stack-grupo">
+                                <h3>
+                                    Herramientas
+                                </h3>
+                                <ul class="stack-lista">
+                                    <li class="stack-card">
+                                        <img class="stack-icon"
+                                        src="img/stack/git-icon.webp"
+                                        alt=""
+                                        >
+                                        <span>Git</span>
+                                    </li>
+                                    <li class="stack-card">
+                                        <img class="stack-icon"
+                                        src="img/stack/github-icon.webp"
+                                        alt=""
+                                        >
+                                        <span>GitHub</span>
+                                    </li>
+                                    <li class="stack-card">
+                                        <img class="stack-icon"
+                                        src="img/stack/ia-icon.webp"
+                                        alt=""
+                                        >
+                                        <span>IA</span>
+                                    </li>
+                                    <li class="stack-card">
+                                        <img class="stack-icon"
+                                        src="img/stack/docker-icon.webp"
+                                        alt=""
+                                        >
+                                        <span>Docker</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </section>
+
+                    <!-- Proyectos -->
+
+                    <section
+                        class="portafolio-proyectos"
+                        id="proyectos"
+                    >
+                        <h2>Proyectos</h2>
+                            <div class="project-general">
+                                <article>
+                                    <div class="projects-laVitrina">
+                                        <img class="project-lavitrina"
+                                        src="img/project/laVitrina.webp"
+                                        alt="Vista previa del proyecto LaVitrina"
+                                        >
+                                        <h3>LaVitrina</h3>
+                                        <p>
+                                            LaVitrina es una web para organizar tus colecciones
+                                            y conectar con personas que comparten tus mismos gustos.
+                                        </p>
+                                        <div class="project-actions">
+                                            <a href="https://borjall22.github.io/La-Vitrina/" aria-label="Visitar la web de LaVitrina">
+                                                <img
+                                                src="img/icon/web-icon.webp"
+                                                alt="">
+                                            </a>
+                                            <a href="https://github.com/borjall22/La-Vitrina" aria-label="Ver LaVitrina en GitHub">
+                                                <img
+                                                src="img/stack/github-icon.webp"
+                                                alt="">
+                                            </a>
+                                            <button type="button" aria-label="Ver más información sobre LaVitrina">
+                                                <img
+                                                src="img/icon/more-icon.webp"
+                                                alt="">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                    </section>
+
+                    <!-- Contacto -->
+
+                    <section
+                        class="portafolio-contacto"
+                        id="contacto"
+                    >
+                        <h2>Contacto</h2>
+                        <p>
+                            Si quieres contactar conmigo, puedes hacerlo por cualquiera de estos canales.
+                        </p>
+                        <div class="contact-links">
+
+                            <a href="mailto:borjalljose@gmail.com">
+                                <img
+                                src="img/icon/gmail-icon.webp"
+                                alt="">
+                                <span>Gmail</span>
+                            </a>
+
+                            <a href="https://www.linkedin.com/in/borja-lopez-963103434/">
+                                <img
+                                src="img/stack/linkedin-icon.webp"
+                                alt="">
+                                <span>LinkedIn</span>
+                            </a>
+
+                            <a href="https://wa.me/34638276779">
+                                <img
+                                src="img/icon/whatsapp-icon.webp"
+                                alt="">
+                                <span>WhatsApp</span>
+                            </a>
+
+                        </div>
+                    </section>
+
+                    <!-- Calendario -->
+
+                    <section
+                        class="portafolio-calendario"
+                        id="calendario"
+                    >
+                        <h2>
+                            Calendario
+                        </h2>
+                        <p>
+                            Aquí muestro mi trayectoria de estudios, está en constante evolución
+                        </p>
+                        <div class="timeline-panel">
+
+                            <div class="timeline-years">
+                                <span>2023</span>
+                                <span>2024</span>
+                                <span>2025</span>
+                                <span>Hoy</span>
+                            </div>
+
+                            <div class="timeline-grid">
+
+                                <div class="timeline-row-label">Estudios</div>
+                                <div class="timeline-row"></div>
+
+                                <div class="timeline-row-label">Web y aprendizaje</div>
+                                <div class="timeline-row"></div>
+
+                                <div class="timeline-row-label">Certificaciones</div>
+                                <div class="timeline-row"></div>
+
+                                <div class="timeline-row-label">Trabajo</div>
+                                <div class="timeline-row"></div>
+
+                            </div>
+                        </div>
+
+                    </section>
+
+                    <!-- Próximamente -->
+
+                    <section
+                        class="portafolio-proximamente"
+                        id="proximamente"
+                    >
+                    <h2>
+                        Mi aprendizaje
+                    </h2>
+                    <p>
+                        Estas son las tecnologías que me apasionan y que estoy explorando activamente.
+                        Algunas ya las estoy aplicando en proyectos, mientras que otras están en mi hoja de ruta cercana.
+                    </p>
+                    <div class="tabla-aprendizaje">
+                        
+                        <section>
+                            <header>
+                                <span class="circle-learning learning-blue"></span>
+                                <h3 id="intermedioTitulo">Intermedio</h3>
+                                <span>Base sólida</span>
+                            </header>
+
+                            <div class="cards-learning">
+                                <article class="learning-card">
+                                    <img src="img/stack/html5-icon.webp" alt="">
+                                    <h4>HTML</h4>
+                                </article>
+                                <article class="learning-card">
+                                    <img src="img/stack/css-icon.webp" alt="">
+                                    <h4>CSS</h4>
+                                </article>
+                                <article class="learning-card">
+                                    <img src="img/stack/github-icon.webp" alt="">
+                                    <h4>GitHub</h4>
+                                </article>
+                                <article class="learning-card">
+                                    <img src="img/stack/javascript-icon.webp" alt="">
+                                    <h4>JavaScript</h4>
+                                </article>
+                            </div>
+                        </section>
+                        <section>
+                            <header>
+                                <span class="circle-learning learning-blue"></span>
+                                <h3 id="basicoTitulo">Básico</h3>
+                                <span>Aprendiendo y practicando</span>
+                            </header>
+
+                            <div class="cards-learning">
+                                <article class="learning-card">
+                                    <img src="img/stack/java-icon.webp" alt="">
+                                    <h4>Java</h4>
+                                </article>
+                                <article class="learning-card">
+                                    <img src="img/stack/mysql-icon.webp" alt="">
+                                    <h4>MySQL</h4>
+                                </article>
+                                <article class="learning-card">
+                                    <img src="img/stack/docker-icon.webp" alt="">
+                                    <h4>Docker</h4>
+                                </article>
+                                <article class="learning-card">
+                                    <img src="img/stack/ia-icon.webp" alt="">
+                                    <h4>IA OpenCode</h4>
+                                </article>
+                            </div>
+                        </section>
+                                        <section>
+                            <header>
+                                <span class="circle-learning learning-blue"></span>
+                                <h3 id="rutaTitulo">En la hoja de ruta</h3>
+                                <span>Próximos pasos</span>
+                            </header>
+
+                            <div class="cards-learning">
+                                <article class="learning-card">
+                                    <img src="img/stack/angular-icon.webp" alt="">
+                                    <h4>Angular</h4>
+                                </article>
+                                <article class="learning-card">
+                                    <img src="img/stack/react-icon.webp" alt="">
+                                    <h4>React</h4>
+                                </article>
+                                <article class="learning-card">
+                                    <img src="img/stack/python-icon.webp" alt="">
+                                    <h4>Python</h4>
+                                </article>
+                                <article class="learning-card">
+                                    <img src="img/stack/typescript-icon.webp" alt="">
+                                    <h4>TypeScript</h4>
+                                </article>
+                                <article class="learning-card">
+                                    <img src="img/stack/postgresql-icon.webp" alt="">
+                                    <h4>PostgreSQL</h4>
+                                </article>
+                            </div>
+                        </section>
+
                     </div>
-            </section>
-
-            <!-- Contacto -->
-
-            <section
-                class="portafolio-contacto"
-                id="contacto"
-            >
-                <h2>Contacto</h2>
-                <p>
-                    Si quieres contactar conmigo, puedes hacerlo por cualquiera de estos canales.
-                </p>
-                <div class="contact-links">
-
-                    <a href="mailto:borjalljose@gmail.com">
-                        <img
-                        src="img/icon/gmail-icon.webp"
-                        alt="">
-                        <span>Gmail</span>
-                    </a>
-
-                    <a href="https://www.linkedin.com/in/borja-lopez-963103434/">
-                        <img
-                        src="img/stack/linkedin-icon.webp"
-                        alt="">
-                        <span>LinkedIn</span>
-                    </a>
-
-                    <a href="https://wa.me/34638276779">
-                        <img
-                        src="img/icon/whatsapp-icon.webp"
-                        alt="">
-                        <span>WhatsApp</span>
-                    </a>
+                    </section>
 
                 </div>
-            </section>
-
-            <!-- Calendario -->
-
-            <section
-                class="portafolio-calendario"
-                id="calendario"
-            >
-                <h2>
-                    Calendario
-                </h2>
-                <p>
-                    Aquí muestro mi trayectoria de estudios, está en constante evolución
-                </p>
-                <div class="timeline-panel">
-
-                    <div class="timeline-years">
-                        <span>2023</span>
-                        <span>2024</span>
-                        <span>2025</span>
-                        <span>Hoy</span>
-                    </div>
-
-                    <div class="timeline-grid">
-
-                        <div class="timeline-row-label">Estudios</div>
-                        <div class="timeline-row"></div>
-
-                        <div class="timeline-row-label">Web y aprendizaje</div>
-                        <div class="timeline-row"></div>
-
-                        <div class="timeline-row-label">Certificaciones</div>
-                        <div class="timeline-row"></div>
-
-                        <div class="timeline-row-label">Trabajo</div>
-                        <div class="timeline-row"></div>
-
-                    </div>
-                </div>
-
-            </section>
-
-            <!-- Próximamente -->
-
-            <section
-                class="portafolio-proximamente"
-                id="proximamente"
-            >
-            <h2>
-                Mi aprendizaje
-            </h2>
-            <p>
-                Estas son las tecnologías que me apasionan y que estoy explorando activamente.
-                Algunas ya las estoy aplicando en proyectos, mientras que otras están en mi hoja de ruta cercana.
-            </p>
-            <div class="tabla-aprendizaje">
-                
-                <section>
-                    <header>
-                        <span class="circle-learning learning-blue"></span>
-                        <h3 id="intermedioTitulo">Intermedio</h3>
-                        <span>Base sólida</span>
-                    </header>
-
-                    <div class="cards-learning">
-                        <article class="learning-card">
-                            <img src="img/stack/html5-icon.webp" alt="">
-                            <h4>HTML</h4>
-                        </article>
-                        <article class="learning-card">
-                            <img src="img/stack/css-icon.webp" alt="">
-                            <h4>CSS</h4>
-                        </article>
-                        <article class="learning-card">
-                            <img src="img/stack/github-icon.webp" alt="">
-                            <h4>GitHub</h4>
-                        </article>
-                        <article class="learning-card">
-                            <img src="img/stack/javascript-icon.webp" alt="">
-                            <h4>JavaScript</h4>
-                        </article>
-                    </div>
-                </section>
-                <section>
-                    <header>
-                        <span class="circle-learning learning-blue"></span>
-                        <h3 id="basicoTitulo">Básico</h3>
-                        <span>Aprendiendo y practicando</span>
-                    </header>
-
-                    <div class="cards-learning">
-                        <article class="learning-card">
-                            <img src="img/stack/java-icon.webp" alt="">
-                            <h4>Java</h4>
-                        </article>
-                        <article class="learning-card">
-                            <img src="img/stack/mysql-icon.webp" alt="">
-                            <h4>MySQL</h4>
-                        </article>
-                        <article class="learning-card">
-                            <img src="img/stack/docker-icon.webp" alt="">
-                            <h4>Docker</h4>
-                        </article>
-                        <article class="learning-card">
-                            <img src="img/stack/ia-icon.webp" alt="">
-                            <h4>IA OpenCode</h4>
-                        </article>
-                    </div>
-                </section>
-                                <section>
-                    <header>
-                        <span class="circle-learning learning-blue"></span>
-                        <h3 id="rutaTitulo">En la hoja de ruta</h3>
-                        <span>Próximos pasos</span>
-                    </header>
-
-                    <div class="cards-learning">
-                        <article class="learning-card">
-                            <img src="img/stack/angular-icon.webp" alt="">
-                            <h4>Angular</h4>
-                        </article>
-                        <article class="learning-card">
-                            <img src="img/stack/react-icon.webp" alt="">
-                            <h4>React</h4>
-                        </article>
-                        <article class="learning-card">
-                            <img src="img/stack/python-icon.webp" alt="">
-                            <h4>Python</h4>
-                        </article>
-                        <article class="learning-card">
-                            <img src="img/stack/typescript-icon.webp" alt="">
-                            <h4>TypeScript</h4>
-                        </article>
-                        <article class="learning-card">
-                            <img src="img/stack/postgresql-icon.webp" alt="">
-                            <h4>PostgreSQL</h4>
-                        </article>
-                    </div>
-                </section>
-
+            </div>
             </div>
             </section>
-
         </main>
 
     </body>
