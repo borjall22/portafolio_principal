@@ -1,9 +1,9 @@
 /* ==================================================
    1. BASE GENERAL
    ================================================== */
-    /*Variables generales*/
+     /*Variables generales*/
 
-    :root{
+     :root{
         --fondo-principal:#0b1118;
         --fondo-portfolio: radial-gradient(
             ellipse closest-side at 50% 45%,
@@ -18,7 +18,7 @@
         --borde-suave:rgba(255, 255, 255, 0.09);
 
         --acento:#a4c1ca;
-    }
+     }
 
 
     /*Modelo de caja*/
@@ -27,13 +27,13 @@
     *::before,
     *::after {
         box-sizing: border-box;
-    }
+     }
 
     /*Documento*/
 
     html {
         scroll-behavior: smooth;
-    }
+     }
 
     body {
         margin: 0;
@@ -50,17 +50,15 @@
             Arial, 
             sans-serif;
         font-size: 16px;
-        line-height: 1.5;
-        
-    }
-
+        line-height: 1.5;   
+     }
 /* ==================================================
    2. PORTFOLIO
-   ================================================== */
+================================================== */
 
-   /* Fondo y superficie generales del portafolio */
+     /* Fondo y superficie generales del portafolio */
 
-   .pantalla-transicion{
+     .pantalla-transicion{
         width: 100%;
         min-height: 100svh;
         display: flex;
@@ -69,34 +67,34 @@
         overflow-x: hidden;
         overflow-y: auto;
         padding: 32px;
-   }
+     }
 
-   /* Contenedor general del portafolio */
+     /* Contenedor general del portafolio */
 
-   .portfolio-intro{
+     .portfolio-intro{
         width: min(1100px, 90vw);
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
-   }
+     }
 
-   /* ==================================================
+/* ==================================================
    3. PERFIL
-   ================================================== */
+================================================== */
 
-   /* Contenerdor del perfil */
+     /* Contenerdor del perfil */
 
-   .portfolio-perfil{
+     .portfolio-perfil{
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
-   }
+     }
 
-    /* Foto de perfil */
+     /* Foto de perfil */
 
-   .photo-perfil{
+     .photo-perfil{
         width: min(22svh, 44vw);
         height: auto;
         aspect-ratio: 1 / 1;
@@ -108,32 +106,32 @@
         box-shadow: 
             0 0 0 8px rgba(255, 255, 255, 0.03),
             0 18px 50px rgba(0, 0, 0, 0.45);
-   }
+     }
 
-   /* Titulo principal */
+     /* Titulo principal */
 
-   .title-perfil{
+     .title-perfil{
         margin: 0;
         color: var(--texto-principal);
         font-size: clamp(2.6rem, 6.6vw, 5.6rem);
         line-height: 0.95;
         font-weight: 600;
         letter-spacing: -0.04em;
-   }
+     }
 
-    /* Frase bajo el título */
+     /* Frase bajo el título */
 
-   .portfolio-tagline{
+     .portfolio-tagline{
         width: min(720px, 92vw);
         margin: 26px 0 0;
         color: var(--texto-secundario);
         font-size: clamp(0.95rem, 1.5vw, 1.15rem);
         line-height: 1.5;
-   }
+     }
 
-   /* Biografía */
+     /* Biografía */
 
-   .portfolio-bio{
+     .portfolio-bio{
         width: min(760px, 92vw);
         margin-top: 38px;
         display: grid;
@@ -142,50 +140,50 @@
         font-size: clamp(11.5px, 1.7svh, 15px);
         line-height: 1.6;
         text-align: left;
-   }
+     }
 
-   /* Párrafos de la biografía */
-   .portfolio-bio p {
+     /* Párrafos de la biografía */
+     .portfolio-bio p {
         margin: 0;
-   }
+     }
 
-   /* ==================================================
+/* ==================================================
    4. STACK
-   ================================================== */
+================================================== */
 
-   /* Contenedor general del Stack */
+     /* Contenedor general del Stack */
 
-   .portfolio-stack{
+     .portfolio-stack{
         width: min(1080px, 92vw);
         margin-top: 120px;
         text-align: center;
-   }
+     }
 
-   /* Titulo Stack */
+     /* Titulo Stack */
 
-   .title-stack{
+     .title-stack{
         margin: 0;
         color: var(--texto-principal);
         font-size: clamp(2.2rem, 5vw, 4.4rem);
         line-height: 0.095;
         font-weight: 600;
         letter-spacing: -0.04em;
-   }
+     }
 
-   /* Rejilla grupos */
+     /* Rejilla grupos */
 
-   .stack-grupos{
+     .stack-grupos{
         margin-top: 36px;
         padding-top: 16px;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 22px;
         border-top: 1px solid var(--borde-suave);
-   }
+     }
 
-   /* Grupo individual */
+     /* Grupo individual */
 
-   .stack-grupo{
+     .stack-grupo{
         padding: 12px;
         border: 1px solid var(--borde-suave);
         background: rgba(255, 255, 255, 0.025);
@@ -193,11 +191,11 @@
             inset 0 1px 0 rgba(255, 255, 255, 0.03)
             0 16px 40px rgba(0, 0, 0, 0.18);
         backdrop-filter: blur(14px);
-   }
+     }
 
-   /* Título de cada grupo */
+     /* Título de cada grupo */
 
-   .stack-grupo h3{
+     .stack-grupo h3{
         margin: 0 0 12px;
         padding: 10px 12px;
         border-left: 3px solid var(--acento);
@@ -211,21 +209,21 @@
         letter-spacing: 0.13em;
         text-align: left;
         text-transform: uppercase;
-   }
+     }
 
-   /* Lista de tecnologías */
+     /* Lista de tecnologías */
 
-   .stack-lista{
+     .stack-lista{
         margin: 0;
         padding: 0;
         display: grid;
         gap: 10px;
         list-style: none;
-   }
+     }
 
-   /* Tarjeta de tecnología */
+     /* Tarjeta de tecnología */
 
-   .stack-card{
+     .stack-card{
         min-height: 68px;
         padding: 13px 14px;
         display: flex;
@@ -243,51 +241,51 @@
             transform 0.2s ease,
             border-color 0.2s ease,
             background-color 0,2s ease;
-   }
+     }
 
-   /* Efecto al pasar el ratón */
+     /* Efecto al pasar el ratón */
 
-   .stack-card:hover{
+     .stack-card:hover{
         transform: translateY(-2px);
         border-color: rgba(164, 193, 202, 0.25);
         background: rgba(255, 255, 255, 0.055);
-   }
+     }
 
-   /* Iconos del Stack */
+     /* Iconos del Stack */
 
-   .stack-icon{
+     .stack-icon{
         width: 42px;
         height: 42px;
         flex: 0 0 auto;
         object-fit: contain;
-   }
+     }
 
-   /* ==================================================
+/* ==================================================
    5. PROYECTOS
-   ================================================== */
+================================================== */
 
-   /* Contenedor general de proyectos */
+     /* Contenedor general de proyectos */
 
-   .portfolio-proyectos{
+     .portfolio-proyectos{
         width: min(1080px, 92vw);
         margin-top: 122px;
         text-align: center;
-   }
+     }
 
-   /* Título principal de proyectos*/
+     /* Título principal de proyectos */
 
-   .portfolio-proyectos > h2{
+     .portfolio-proyectos > h2{
         margin: 0;
         color: var(--texto-principal);
         font-size: clamp(2.6rem, 6.6vw, 5.6rem);
         line-height: 0.95;
         font-weight: 600;
         letter-spacing: -0.04em;
-   }
+     }
 
-   /* Panel que contiene los proyectos */
+     /* Panel que contiene los proyectos */
 
-   .project-general{
+     .project-general{
         margin-top: 38px;
         padding: 16px;
         display: grid;
@@ -298,11 +296,11 @@
             inset 0 1px 0 rgba(255, 255, 255, 0.03)
             0 16px 40px rgba(0, 0, 0, 0.18);
         backdrop-filter: blur(14px);
-   }
+     }
 
-   /* Tarjeta del proyecto º1 */
+     /* Tarjeta del proyecto º1 */
 
-   .project-laVitrina{
+     .project-laVitrina{
         display: grid;
         grid-template-columns: 
             minmax(280px, 42%)
@@ -322,11 +320,11 @@
             transform 0.2s ease,
             background 0.2s ease,
             border-color 0.2s ease;
-   }
+     }
 
-   /* Imagen del proyecto */
+     /* Imagen del proyecto */
 
-   .img-lavitrina{
+     .img-lavitrina{
         grid-column: 1;
         grid-row: 1 / span 2;
         width: 100%;
@@ -340,11 +338,11 @@
             rgba(255, 255, 255, 0.05),
             rgba(255, 255, 255, 0.015)
         );
-   }
+     }
 
-   /* Nombre del proyecto */
+     /* Nombre del proyecto */
 
-   .title-lavitrina{
+     .title-lavitrina{
         grid-column: 2;
         grid-row: 1;
         margin: 0;
@@ -353,11 +351,11 @@
         line-height: 1;
         font-weight: 650;
         letter-spacing: -0.035em;
-   }
+     }
 
-   /* Descripcíon corta del proyecto */
+     /* Descripcíon corta del proyecto */
 
-   .text_lavitrina{
+     .text_lavitrina{
         grid-column: 2;
         grid-row: 2;
         max-width: 58ch;
@@ -365,11 +363,11 @@
         color:var(--texto-secundario);
         font-size: 14px;
         line-height: 1.55;
-   }
+     }
 
-   /* Botones y enlaces del proyecto */
+     /* Botones y enlaces del proyecto */
 
-   .project-actions{
+     .project-actions{
         grid-column: 3;
         grid-row: 1 / span 2;
         display: flex;
@@ -377,12 +375,12 @@
         align-items: center;
         justify-content: flex-start;
         gap: 12px;
-   }
+     }
 
-   /* Botón individual de acción */
+     /* Botón individual de acción */
 
-   .project-actions a,
-   .project-actions button{
+     .project-actions a,
+     .project-actions button{
         width: 36px;
         height: 36px;
         padding: 0;
@@ -395,45 +393,256 @@
         transition:
             transform 0.55s cubic-bezier(0.16, 1, 0.3, 1),
             opacity 0.55s cubic-bezier(0.16, 1, 0.3, 1);
-   }
+     }
 
-   /* Efecto al pasar el ratón por los botones */
+     /* Efecto al pasar el ratón por los botones */
 
-   .project-actions a:hover,
-   .project-actions button:hover{
+     .project-actions a:hover,
+     .project-actions button:hover{
         transform: scale(1.12);
-   }
+     }
 
-   /* Iconos de las acciones */
-   .project-actions img{
-    width: 27px;
-    height: 27px;
-    object-fit:  contain;
-    filter: brightness(0) invert(1);
-   }
+     /* Iconos de las acciones */
+
+     .project-actions img{
+          width: 27px;
+          height: 27px;
+          object-fit:  contain;
+          filter: brightness(0) invert(1);
+     }
 
 
-   /* ==================================================
+/* ==================================================
    6. CONTACTO
-   ================================================== */
+================================================== */
 
-   /* ==================================================
+     /* Contenedor general de contactos */
+
+     .portfolio-contacto{
+        width: min(1080px, 92vw);
+        margin-top: 122px;
+        text-align: center;
+     }
+
+     /* Título principal de contactos */
+
+     .portfolio-contacto > h2{
+        margin: 0;
+        color: var(--texto-principal);
+        font-size: clamp(2.6rem, 6.6vw, 5.6rem);
+        line-height: 0.95;
+        font-weight: 600;
+        letter-spacing: -0.04em;
+     }
+
+     /* Texto de abajo del título */
+
+     .portfolio-contacto > p {
+          text-align: center;
+          white-space: nowrap;
+          max-width: 58ch;
+          margin: 0 auto;
+          margin-top: 10px;
+          color:var(--texto-secundario);
+          font-size: 14px;
+          line-height: 1.55;
+     }
+
+     /* Contenedor de los iconos de contactos */
+
+     .contac-links{
+          margin-top: 36px;
+          padding-top: 16px;
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 22px;
+          border-top: 1px solid var(--borde-suave);
+     }
+
+     /* Caja de los iconos */
+
+     .img-1{
+     padding: 12px;
+     border: 1px solid var(--borde-suave);
+     background: rgba(255, 255, 255, 0.025);
+     box-shadow:
+          inset 0 1px 0 rgba(255, 255, 255, 0.03),
+          0 16px 40px rgba(0, 0, 0, 0.18);
+     backdrop-filter: blur(14px);
+     }
+
+     /* Efecto al pasar el ratón */
+
+     .img-1:hover{
+        transform: translateY(-2px);
+        border-color: rgba(164, 193, 202, 0.25);
+        background: rgba(255, 255, 255, 0.055);
+     }
+
+     /* Iconos de contactos */
+
+     .icon-contact{
+        width: 80px;
+        height: 80px;
+        flex: 0 0 auto;
+        object-fit: contain;
+     }
+
+
+/* ==================================================
    7. CALENDARIO
-   ================================================== */
+================================================== */
 
-   /* ==================================================
+     /* Contenedor general de calendario */
+
+     .portfolio-calendario{
+        width: min(1080px, 92vw);
+        margin-top: 122px;
+        text-align: center;
+     }
+
+     /* Título principal de calendario */
+
+     .portfolio-calendario > h2{
+        margin: 0;
+        color: var(--texto-principal);
+        font-size: clamp(2.6rem, 6.6vw, 5.6rem);
+        line-height: 0.95;
+        font-weight: 600;
+        letter-spacing: -0.04em;
+     }
+
+     /* Texto de abajo del título */
+
+     .portfolio-calendario > p {
+          text-align: center;
+          white-space: nowrap;
+          max-width: 58ch;
+          margin: 0 auto;
+          margin-top: 10px;
+          color:var(--texto-secundario);
+          font-size: 14px;
+          line-height: 1.55;
+     }
+
+     /* Panel general del calendario */
+
+     .timeline-panel{
+          margin-top: 34px;
+          padding: 12px 22px 18px;
+          border: 1px solid rgba(255, 255, 255, 0.08);
+          background: rgba(255, 255, 255, 0.018);
+          box-shadow: 
+               inset 0 1px 0 rgba(255, 255, 255, 0.045),
+               0 18px 50px rgba(0, 0, 0, 0.16);
+     }
+
+     /* Fila superior con los años */
+
+     .timeline-years{
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          margin-left: 112px;
+          padding-bottom: 16px;
+          color: var(--texto-secundario);
+          font-size: 14px;
+          font-weight: 650;
+     }
+
+     .timeline-years span {
+          text-align: center;
+     }
+
+     /* Rejilla general del calendario */
+
+     .timeline-grid{
+          margin-top: 0;
+          display: grid;
+          grid-template-columns: 112px 1fr;
+          border-top: 1px solid rgba(255, 255, 255, 0.08);
+     }
+
+     /* Nombres de cada fila */
+
+     .timeline-row-label{
+          min-height: 58px;
+          display: flex;
+          align-items: center;
+          text-align: left;
+          color: var(--texto-principal);
+          font-size: 14px;
+          font-weight: 500;
+     }
+
+     /* Zona temporal de cada fila */
+
+     .timeline-row{
+          position: relative;
+          min-height: 58px;
+          border-bottom: 1px solid var(--borde-suave);
+          background:
+               repeating-linear-gradient(
+               to right,
+               rgba(255, 255, 255, 0.07) 0,
+               rgba(255, 255, 255, 0.07) 1px,
+               transparent 1px,
+               transparent 25%
+          );
+     }
+
+     /* Evita línea inferior innecesaria en la última fila */
+
+     .timeline-grid > :nth-last-child(-n + 2) {
+          border-bottom: none;
+     }
+
+/* ==================================================
    8. MI APRENDIZAJE
-   ================================================== */
+================================================== */
 
-   /* ==================================================
+    /* Contenedor general de aprendizaje */
+
+     .portfolio-proximamente{
+        width: min(1080px, 92vw);
+        margin-top: 122px;
+        text-align: center;
+     }
+
+   /* Título principal de aprendizaje */
+
+     .portfolio-proximamente > h2{
+        margin: 0;
+        color: var(--texto-principal);
+        font-size: clamp(2.6rem, 6.6vw, 5.6rem);
+        line-height: 0.95;
+        font-weight: 600;
+        letter-spacing: -0.04em;
+     }
+
+   /* Texto de abajo del título */
+
+     .portfolio-proximamente > p {
+          text-align: center;
+          max-width: 76ch;
+          margin: 20px auto 0;
+          margin-top: 20px;
+          color:var(--texto-secundario);
+          font-size: 14px;
+          line-height: 1.55;
+     }
+
+
+
+
+ /* ==================================================
    9. DOCK
-   ================================================== */
+================================================== */
 
-   /* ==================================================
+/* ==================================================
    10. RESPONSIVE
-   ================================================== */
+================================================== */
 
-   /* ==================================================
+/* ==================================================
    11. ACCESIBILIDAD / REDUCED MOTION
-   ================================================== */
+================================================== */
 
