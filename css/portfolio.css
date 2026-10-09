@@ -631,6 +631,181 @@
           line-height: 1.55;
      }
 
+     /* Rejilla grupos */
+
+     .tabla-aprendizaje{
+          position: relative;
+          margin-top: 36px;
+          padding-top: 16px;
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 22px;
+          border-top: 1px solid var(--borde-suave);
+     }
+
+     .tabla-aprendizaje::after{
+          content: "";
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 105px;
+          height: 1px;
+          background: var(--borde-suave);
+     }
+
+     /* Grupo individual */
+
+     .learning-card{
+          margin-top: 10px;
+          padding: 12px;
+          border: 1px solid var(--borde-suave);
+          background: rgba(255, 255, 255, 0.025);
+          box-shadow:
+               inset 0 1px 0 rgba(255, 255, 255, 0.03)
+               0 16px 40px rgba(0, 0, 0, 0.18);
+          backdrop-filter: blur(14px);
+          grid-template-columns: repeat(2, 1fr);
+          display: grid;
+     }
+
+     /* Título de cada grupo */
+
+     .grupos-intermedio h3{
+        margin: 0 0 12px;
+        padding: 10px 12px;
+        color:var(--texto-principal);
+        font-size: 13.5px;
+        letter-spacing: 0.13em;
+        text-align: left;
+        text-transform: uppercase;
+     }
+
+     .grupos-basico h3{
+        margin: 0 0 12px;
+        padding: 10px 12px;
+        color:var(--texto-principal);
+        font-size: 13.5px;
+        letter-spacing: 0.13em;
+        text-align: left;
+        text-transform: uppercase;
+     }
+
+     .grupos-hoja-ruta h3{
+        margin: 0 0 12px;
+        padding: 10px 12px;
+        color:var(--texto-principal);
+        font-size: 13.5px;
+        letter-spacing: 0.13em;
+        text-align: left;
+        text-transform: uppercase;
+     }
+
+     /* Circulos del título */
+
+     .grupos-intermedio h3::before{
+          content: "";
+          display: inline-block;
+          width: 8px;
+          height: 8px;
+          margin-right: 10px;
+          border-radius: 50%;
+          background: #25af31;
+     }
+
+     .grupos-basico h3::before{
+          content: "";
+          display: inline-block;
+          width: 8px;
+          height: 8px;
+          margin-right: 10px;
+          border-radius: 50%;
+          background: #eca013;
+     }
+
+     .grupos-hoja-ruta h3::before{
+          content: "";
+          display: inline-block;
+          width: 8px;
+          height: 8px;
+          margin-right: 10px;
+          border-radius: 50%;
+          background: #c4231d;
+     }
+
+     /* Subtitulo */
+
+     .grupos-intermedio header > span:last-child,
+     .grupos-basico header > span:last-child,
+     .grupos-hoja-ruta header > span:last-child {
+          display: block;
+          width: 100%;
+          text-align: left;
+          margin-top: 0;
+          color:var(--texto-secundario);
+          font-size: 14px;
+          line-height: 1.55;
+          padding-bottom: 10px;
+          padding-left: 30px;
+          box-sizing: border-box;
+     }
+
+     /* Bordes de los grupos */
+
+     .grupos-intermedio .learning-card{
+          border-color: rgba(78, 155, 220, 0.45);
+          background: rgba(45, 107, 160, 0.10);
+     }
+
+     .grupos-hoja-ruta .learning-card{
+          border-style: dashed;
+          background: transparent;
+     }
+
+     /* Iconos */
+
+     .learning-card img {
+          width: 72px;
+          height: 72px;
+          object-fit: contain;
+          justify-self: center;
+          align-self: center;
+     }
+
+     /* Cambiar color de GitHub y ChatGPT */
+
+     .learning-card img[src*= "github"],
+     .learning-card img[src*= "ia-icon"]{
+          filter: invert(1);
+     }
+
+     /* Efecto al pasar el ratón */
+
+     .grupos-intermedio .learning-card:hover{
+        transform: translateY(-2px);
+        border-color: rgba(78, 155, 220,0.75);
+        background: rgba(45, 107, 160, 0.18);
+     }
+
+     .grupos-basico .learning-card:hover{
+        transform: translateY(-2px);
+        border-color: rgba(164, 193, 202, 0.25);
+        background: rgba(255, 255, 255, 0.055);
+     }
+
+     .grupos-hoja-ruta .learning-card:hover{
+        transform: translateY(-2px);
+        border-color: rgba(164, 193, 202, 0.25);
+        background: rgba(255, 255, 255, 0.055);
+     }
+
+     /* Nombres de los iconos */
+
+     .learning-card h4{
+          color: var(--texto-principal);
+          font-size: 16px;
+          font-weight: 600;
+     }
+
 
 
 
