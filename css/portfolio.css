@@ -262,13 +262,156 @@
         object-fit: contain;
    }
 
-
-
-
-
    /* ==================================================
    5. PROYECTOS
    ================================================== */
+
+   /* Contenedor general de proyectos */
+
+   .portfolio-proyectos{
+        width: min(1080px, 92vw);
+        margin-top: 122px;
+        text-align: center;
+   }
+
+   /* Título principal de proyectos*/
+
+   .portfolio-proyectos > h2{
+        margin: 0;
+        color: var(--texto-principal);
+        font-size: clamp(2.6rem, 6.6vw, 5.6rem);
+        line-height: 0.95;
+        font-weight: 600;
+        letter-spacing: -0.04em;
+   }
+
+   /* Panel que contiene los proyectos */
+
+   .project-general{
+        margin-top: 38px;
+        padding: 16px;
+        display: grid;
+        gap: 14px;
+        border: 1px solid var(--borde-suave);
+        background: rgba(255, 255, 255, 0.025);
+        box-shadow:
+            inset 0 1px 0 rgba(255, 255, 255, 0.03)
+            0 16px 40px rgba(0, 0, 0, 0.18);
+        backdrop-filter: blur(14px);
+   }
+
+   /* Tarjeta del proyecto º1 */
+
+   .project-laVitrina{
+        display: grid;
+        grid-template-columns: 
+            minmax(280px, 42%)
+            minmax(0, 1fr)
+            44px;
+        grid-template-rows: auto auto;
+        align-items: start;
+        gap: 22px;
+        padding: 18px;
+        border: 1px solid var(--borde-suave);
+        background: var(--fondo-tarjetas);
+        box-shadow: 
+            inset 0 1px 0 rgba(255, 255, 255, 0.025),
+            0 10px 24px rgba(0, 0, 0, 0.14);
+        text-align: left;
+        transition: 
+            transform 0.2s ease,
+            background 0.2s ease,
+            border-color 0.2s ease;
+   }
+
+   /* Imagen del proyecto */
+
+   .img-lavitrina{
+        grid-column: 1;
+        grid-row: 1 / span 2;
+        width: 100%;
+        height: 238px;
+        display: block;
+        object-fit: cover;
+        object-position: top left;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.05),
+            rgba(255, 255, 255, 0.015)
+        );
+   }
+
+   /* Nombre del proyecto */
+
+   .title-lavitrina{
+        grid-column: 2;
+        grid-row: 1;
+        margin: 0;
+        color: var(--texto-principal);
+        font-size:  clamp(1.35rem, 2.2vw, 2.2rem);
+        line-height: 1;
+        font-weight: 650;
+        letter-spacing: -0.035em;
+   }
+
+   /* Descripcíon corta del proyecto */
+
+   .text_lavitrina{
+        grid-column: 2;
+        grid-row: 2;
+        max-width: 58ch;
+        margin: 0;
+        color:var(--texto-secundario);
+        font-size: 14px;
+        line-height: 1.55;
+   }
+
+   /* Botones y enlaces del proyecto */
+
+   .project-actions{
+        grid-column: 3;
+        grid-row: 1 / span 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 12px;
+   }
+
+   /* Botón individual de acción */
+
+   .project-actions a,
+   .project-actions button{
+        width: 36px;
+        height: 36px;
+        padding: 0;
+        display: grid;
+        place-items: center;
+        border: 0;
+        color:var(--texto-principal);
+        background: transparent;
+        cursor: pointer;
+        transition:
+            transform 0.55s cubic-bezier(0.16, 1, 0.3, 1),
+            opacity 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+   }
+
+   /* Efecto al pasar el ratón por los botones */
+
+   .project-actions a:hover,
+   .project-actions button:hover{
+        transform: scale(1.12);
+   }
+
+   /* Iconos de las acciones */
+   .project-actions img{
+    width: 27px;
+    height: 27px;
+    object-fit:  contain;
+    filter: brightness(0) invert(1);
+   }
+
 
    /* ==================================================
    6. CONTACTO
