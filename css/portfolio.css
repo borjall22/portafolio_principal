@@ -260,6 +260,14 @@
         object-fit: contain;
      }
 
+     /* Cambiar color a los iconos de Github y ChatGPT */
+
+     .stack-icon[src*= "github"],
+     .stack-icon[src*= "ia-icon"]{
+          filter: invert(1);
+          opacity: 0.95;
+     }
+
 /* ==================================================
    5. PROYECTOS
 ================================================== */
@@ -283,10 +291,20 @@
         letter-spacing: -0.04em;
      }
 
+     .portfolio-proyectos > h2::after{
+          content: "";
+          display: block;
+          left: 0;
+          right: 0;
+          margin-top: 18px;
+          height: 1px;
+          background: var(--borde-suave);
+     }
+
      /* Panel que contiene los proyectos */
 
      .project-general{
-        margin-top: 38px;
+        margin-top: 18px;
         padding: 16px;
         display: grid;
         gap: 14px;
@@ -528,6 +546,7 @@
      /* Panel general del calendario */
 
      .timeline-panel{
+          --hoy-posicion: 89.615%;
           margin-top: 34px;
           padding: 12px 22px 18px;
           border: 1px solid rgba(255, 255, 255, 0.08);
@@ -535,15 +554,27 @@
           box-shadow: 
                inset 0 1px 0 rgba(255, 255, 255, 0.045),
                0 18px 50px rgba(0, 0, 0, 0.16);
+          position: relative;
+     }
+
+     .timeline-panel::before{
+          content: "";
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: -18px;
+          height: 1px;
+          background: var(--borde-suave);
      }
 
      /* Fila superior con los años */
 
      .timeline-years{
           display: grid;
-          grid-template-columns: repeat(4, 1fr);
+          grid-template-columns: 25% 30% 45%;
           margin-left: 112px;
-          padding-bottom: 16px;
+          padding-bottom: 28px;
+          position: relative;
           color: var(--texto-secundario);
           font-size: 14px;
           font-weight: 650;
@@ -551,6 +582,194 @@
 
      .timeline-years span {
           text-align: center;
+     }
+     
+     /* Brillo del ahora */
+
+     .timeline-years > span:last-of-type{
+          position: absolute;
+          left: var(--hoy-posicion);
+          top: 0;
+          transform: translateX(-50%);
+          animation: brillo-ahora-texto 2.4s ease-in-out infinite;
+     }
+
+     /* Animación del Ahora*/
+
+     @keyframes brillo-ahora-texto{
+          0%,
+          100%{
+               color: var(--texto-secundario);
+
+               text-shadow:
+                    0 0 4px rgba(255, 255, 255, 0.25);
+          }
+
+          50%{
+               color: #ffffff;
+
+               text-shadow:
+                    0 0 6px rgba(255, 255, 255, 1),
+                    0 0 14px rgba(255, 255, 255, 0.90),
+                    0 0 24px rgba(120, 189, 255, 0.65);
+          }
+     }
+
+     /* Separación de los años en tres columnas */
+
+     .timeline-meses{
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 4px;
+          display: grid;
+          grid-template-columns: 25% 30% 45%;
+          height: 12px;
+          pointer-events: none;
+     }
+
+     /* Separación de las columnas en 12 */
+
+     .timeline-meses span{
+          position: relative;
+          height: 12px;
+     }
+
+     /* Puntos de 2024 */
+
+     .timeline-meses-2024::before{
+          content: "";
+          position: absolute;
+          left: calc(100% / 24);
+          top: 0;
+          width: calc(100% * 11 / 12);
+          height: 100%;
+          background: 
+               radial-gradient(
+                    circle,
+                    rgba(255, 255, 255, 0.72) 2px,
+                    transparent 2.4px
+               );
+          background-size: calc(100% / 11) 100%;
+          background-position: center;
+          background-repeat: repeat-x;
+     }
+
+     /* Línea del mes de diciembre del 2024 */
+     
+     .timeline-meses::before{
+          content: "";
+          position: absolute;
+          left: 25%;
+          top: 0;
+          bottom: -5px;
+          width: 1px;
+          background: rgba(255, 255, 255, 0.72);
+     }
+
+     /* Puntos de 2025 */
+
+     .timeline-meses-2025::before{
+          content: "";
+          position: absolute;
+          left: calc(100% / 24);
+          top: 0;
+          width: calc(100% * 11 / 12);
+          height: 100%;
+          background: 
+               radial-gradient(
+                    circle,
+                    rgba(255, 255, 255, 0.72) 2px,
+                    transparent 2.4px
+               );
+          background-size: calc(100% / 11) 100%;
+          background-position: center;
+          background-repeat: repeat-x;
+     }
+
+     /* Línea del mes de diciembre del 2025 */
+
+     .timeline-meses::after{
+          content: "";
+          position: absolute;
+          left: 55%;
+          top: 0;
+          bottom: -5px;
+          width: 1px;
+          background: rgba(255, 255, 255, 0.72);
+     }
+
+     /* Puntos del año 2026 */
+
+     .timeline-meses-2026::before{
+          content: "";
+          position: absolute;
+          left: calc(100% / 26);
+          top: 0;
+          width: calc(100% * 12 / 13);
+          height: 100%;
+          background: 
+               radial-gradient(
+                    circle at 50% 50%,
+                    rgba(255, 255, 255, 0.72) 2px,
+                    transparent 2.4px
+               );
+          background-size: calc(100% / 12) 100%;
+          background-position: left top;
+          background-repeat: repeat-x;
+     }
+
+     /* Línea del hoy */
+
+     .timeline-hoy{
+          position: absolute;
+          left: var(--hoy-posicion);
+          top: -3px;
+          bottom: -5px;
+          height: 270px;
+          width: 1px;
+          transform: translateX(-50%);
+          background: #78bdff;
+          box-shadow: 
+               0 0 4px rgba(120, 189, 255, 1),
+               0 0 10px rgba(120, 189, 255, 0.75),
+               0 0 20px rgba(120, 189, 255, 0.4);
+          animation: brillo-linea 2.4s ease-in-out infinite;
+
+          pointer-events: none;
+     }
+
+     @keyframes brillo-linea{
+          0%,
+          100%{
+               opacity: 0.65;
+
+               background: #78bdff;
+
+               box-shadow:
+                    0 0 4px rgba(120, 189, 255, 0.70),
+                    0 0 10px rgba(120, 189, 255, 0.45),
+                    0 0 18px rgba(120, 189, 255, 0.25);
+          }
+
+          50%{
+               opacity: 1;
+
+               background: #ffffff;
+
+               box-shadow:
+                    0 0 6px rgba(255, 255, 255, 1),
+                    0 0 14px rgba(255, 255, 255, 1),
+                    0 0 28px rgba(255, 255, 255, 0.95),
+                    0 0 42px rgba(255, 255, 255, 0.70),
+                    0 0 60px rgba(120, 189, 255, 0.45);
+          }
+     }
+
+     /* Mover el 2026 */
+
+     .timeline-years > span:nth-child(3){
+          transform: translateX(-6%);
      }
 
      /* Rejilla general del calendario */
@@ -574,20 +793,97 @@
           font-weight: 500;
      }
 
-     /* Zona temporal de cada fila */
+      /* Zona temporal de cada fila */
 
      .timeline-row{
           position: relative;
           min-height: 58px;
           border-bottom: 1px solid var(--borde-suave);
           background:
-               repeating-linear-gradient(
-               to right,
-               rgba(255, 255, 255, 0.07) 0,
-               rgba(255, 255, 255, 0.07) 1px,
-               transparent 1px,
-               transparent 25%
+               linear-gradient(
+                    to right,
+                    transparent 0,
+                    transparent 25%,
+                    rgba(255, 255, 255, 0.07) 25%,
+                    transparent calc(25% + 1px),
+                    transparent 55%,
+                    rgba(255, 255, 255, 0.07) 55%,
+                    rgba(255, 255, 255, 0.07) calc(55% + 1px),
+                    transparent calc(55% + 1px)
           );
+     }
+
+     /* Periodos largos del calendario */
+
+     .timeline-event-estudios,
+     .timeline-event-trabajo{
+          position: absolute;
+          left: var(--left);
+          width: var(--width);
+          top: 50%;
+          transform: translateY(-50%);
+          box-sizing: border-box;
+          padding: 8px 12px;
+          color: var(--texto-principal);
+          font-size: 14px;
+          font-weight: 600;
+          text-align: center;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+     }
+
+     /* Estudios */
+
+     .timeline-event-estudios{
+          border: 1px solid rgba(78, 155, 220, 0.55);
+          background: rgba(45, 107, 160, 0.28);
+     }
+
+     /* Trabajo */
+
+     .timeline-event-trabajo{
+          border: 1px solid rgba(78, 155, 220, 0.40);
+          background: rgba(45, 107, 160, 0.16);
+     }
+
+     /* Certificados */
+
+     .timeline-event-certificados{
+          position: absolute;
+          left: var(--left);
+          top: 50%;
+          border: ;
+          transform: translate(-50%, -50%);
+          padding-left: 13px;
+          font-size: 10px;
+          font-weight: 600;
+          color: var(--texto-secundario);
+          white-space: nowrap;
+     }
+
+     .timeline-event-certificados-arriba{
+          top: 12px;
+          transform: translateX(-50%);
+     }
+
+     .timeline-event-certificados-abajo{
+          top: auto;
+          bottom: 12px;
+          transform: translateX(-50%);
+     }
+
+     .timeline-event-certificados::before{
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 50%;
+          width: 7px;
+          height: 7px;
+          border-radius: 50%;
+          transform: translateY(-50%);
+          background: var(--texto-principal);
+          box-shadow: 0 0 10px rgba(255, 255, 255, 0.25);
      }
 
      /* Evita línea inferior innecesaria en la última fila */
@@ -806,12 +1102,97 @@
           font-weight: 600;
      }
 
-
-
-
  /* ==================================================
    9. DOCK
 ================================================== */
+
+/* Posición del dock */
+
+.dock{
+     position: fixed;
+     top: 50%;
+     right: 15px;
+     transform:  translateY(-50%);
+     z-index: 120;
+}
+
+/* Color de los iconos del dock */
+
+.dock img{
+     filter: invert(1);
+     opacity: 0.65;
+     width: 30px;
+     height: 30px;
+     transition: opacity 0.2s ease;
+}
+
+/* Borde del dock */
+.dock ul{
+     display: flex;
+     flex-direction: column;
+     gap: 12px;
+     margin: 0;
+     padding: 3px;
+     list-style: none;
+     border: 1px solid var(--borde-suave);
+     backdrop-filter: blur(14px);
+     box-shadow: 
+          inset 0 1px 0 rgba(255, 255, 255, 0.035),
+          0 16px 40px rgba(0, 0, 0, 0.18);
+}
+
+.dock a{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     width: 46px;
+     height: 46px;
+}
+
+/* Efecto al dock */
+
+.dock a:hover{
+     background: rgba(255, 255, 255, 0.06);
+     transform: scale(1.08);
+}
+
+.dock a{
+     transition: 
+          background 0.2s ease,
+          transform 0.2s ease;
+}
+
+/* Cambia de trasnparente a blanco */
+.dock a:hover img{
+     opacity: 1;
+}
+
+/* Ajuste de los iconos al pulsar */
+
+#portfolio{
+     scroll-margin-top: 70px;
+}
+
+#stack{
+     scroll-margin-top: 400px;
+}
+
+#proyectos{
+     scroll-margin-top: 300px;
+}
+
+#contacto{
+     scroll-margin-top: 300px;
+}
+
+#calendario{
+     scroll-margin-top: 300px;
+}
+
+#proximamente{
+     scroll-margin-top: 300px;
+}
+
 
 /* ==================================================
    10. RESPONSIVE
