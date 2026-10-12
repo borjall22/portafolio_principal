@@ -188,7 +188,7 @@
         border: 1px solid var(--borde-suave);
         background: rgba(255, 255, 255, 0.025);
         box-shadow:
-            inset 0 1px 0 rgba(255, 255, 255, 0.03)
+            inset 0 1px 0 rgba(255, 255, 255, 0.03),
             0 16px 40px rgba(0, 0, 0, 0.18);
         backdrop-filter: blur(14px);
      }
@@ -240,7 +240,7 @@
         transition:
             transform 0.2s ease,
             border-color 0.2s ease,
-            background-color 0,2s ease;
+            background-color 0.2s ease;
      }
 
      /* Efecto al pasar el ratón */
@@ -311,7 +311,7 @@
         border: 1px solid var(--borde-suave);
         background: rgba(255, 255, 255, 0.025);
         box-shadow:
-            inset 0 1px 0 rgba(255, 255, 255, 0.03)
+            inset 0 1px 0 rgba(255, 255, 255, 0.03),
             0 16px 40px rgba(0, 0, 0, 0.18);
         backdrop-filter: blur(14px);
      }
@@ -373,7 +373,7 @@
 
      /* Descripcíon corta del proyecto */
 
-     .text_lavitrina{
+     .text-lavitrina{
         grid-column: 2;
         grid-row: 2;
         max-width: 58ch;
@@ -853,7 +853,6 @@
           position: absolute;
           left: var(--left);
           top: 50%;
-          border: ;
           transform: translate(-50%, -50%);
           padding-left: 13px;
           font-size: 10px;
@@ -957,7 +956,7 @@
           border: 1px solid var(--borde-suave);
           background: rgba(255, 255, 255, 0.025);
           box-shadow:
-               inset 0 1px 0 rgba(255, 255, 255, 0.03)
+               inset 0 1px 0 rgba(255, 255, 255, 0.03),
                0 16px 40px rgba(0, 0, 0, 0.18);
           backdrop-filter: blur(14px);
           grid-template-columns: repeat(2, 1fr);
@@ -1198,7 +1197,344 @@
    10. RESPONSIVE
 ================================================== */
 
+/* TABLES / PANTALLAS MEDIANAS Hasta 900px */
+
+@media(max-width: 900px){
+
+     /* Stack: pasa de 4 columnas a 2*/
+
+     .stack-grupos{
+          grid-template-columns: repeat(2, 1fr);
+     }
+}
+
+/* MÖVIL / PANTALLAS PEQUEÑAS Hasta 600px */
+
+@media(max-width: 600px){
+
+     /*------------------------------------ 
+          GENERAL 
+     --------------------------------------*/
+
+     /*Reduce los márgenes laterales en móvil */
+
+     .pantalla-transicion{
+          padding: 24px 16px;     
+     }
+
+     /* El portafolio aprovecha todo el ancho disponible */
+     .portfolio-intro{
+          width: 100%;
+          padding-bottom: 80px;
+     }
+
+
+
+     .stack-grupos{
+          grid-template-columns: 1fr;
+     }
+
+     /*------------------------------------ 
+          SEPARACIÖN ENTRE SECCIONES
+     --------------------------------------*/
+
+     /* Las secciones ocupan todo el ancho disponible
+     y reduce la separación vertical */
+
+     .portfolio-stack,
+     .portfolio-proyectos,
+     .portfolio-contacto,
+     .portfolio-calendario,
+     .portfolio-proximamente{
+          width: 100%;
+          margin-top: 90px;
+     }
+
+     /*------------------------------------ 
+          PERFIL
+     --------------------------------------*/
+
+     /* El texto aprovecha todo el ancho disponible */
+
+     .portfolio-tagline,
+     .portfolio-bio{
+          width: 100%;
+     }
+
+     /* Evita que la biografía quede muy pequeña */
+
+     .portfolio-bio{
+          font-size: 14px;
+     }
+
+     /*------------------------------------ 
+          STACK
+     --------------------------------------*/
+
+     /* Pasa de 2 columnas a una sola */
+
+     .stack-grupos{
+          grid-template-columns: 1fr;
+          gap: 16px;
+     }
+
+     /*------------------------------------ 
+          PROYECTOS
+     --------------------------------------*/
+
+     /* Reduce el espacio del panel exterior un poco */
+
+     .project-general{
+          padding: 10px;
+     }
+
+     /* Modificas las tarjetas para que se vea mejor en vertical */
+
+     .project-laVitrina{
+          grid-template-columns: 1fr;
+          grid-template-rows: auto;
+          gap: 16px;
+          padding: 14px;
+     }
+
+     /* Imagen del proyecto */
+
+     .img-lavitrina{
+          grid-column: 1;
+          grid-row: 1;
+          height: auto;
+          aspect-ratio: 16 / 10;
+     }
+
+     /* Título debajo de la imagen */
+
+     .title-lavitrina{
+          grid-column: 1;
+          grid-row: 2;
+     }
+
+     /* Descripción debajo del título */
+     .text-lavitrina{
+          grid-column: 1;
+          grid-row: 3;
+          max-width: none;
+     }
+
+     /* Los botones pasa de vertical a horizontales */
+     .project-actions{
+          grid-column: 1;
+          grid-row: 4;
+          flex-direction: row;
+          justify-content: flex-start;
+     }
+
+     /*------------------------------------ 
+          CONTACTO
+     --------------------------------------*/
+
+     /* Permitimos que el texto salte de línea */
+
+     .portfolio-contacto > p{
+          white-space: normal;
+          max-width: 100%;
+     }
+
+     /* Tarjetas de contacto algo más compactas */
+
+     .img-1{
+          padding: 10px;
+     }
+
+     /* Iconos adaptados al ancho de un móvil */
+     
+     .icon-contact{
+          width: 56px;
+          height: 56px;
+     }
+
+     /*------------------------------------ 
+          CALENDARIO
+     --------------------------------------*/
+
+     /* Deja que el texto descriptivo se divida */
+
+     .portfolio-calendario > p{
+          white-space: normal;
+          max-width: 100%;
+     }
+
+     /* En el móvil conserva la forma del calendario.
+     Dejando el desplazamiento horizontal */
+
+     .portfolio-calendario{
+          overflow-x: auto;
+          scrollbar-width: thin;
+     }
+
+     /* Mantiene los espacios de los años, meses, eventos y etiqutas */
+
+     .timeline-panel{
+          min-width: 760px;
+     }
+
+     /*------------------------------------ 
+          MI APREDIZAJE
+     --------------------------------------*/
+
+     /* Pasa de estar los tres niveles a vertical */
+
+     .tabla-aprendizaje{
+          grid-template-columns: 1fr;
+          gap: 32px;
+     }
+
+     /* Modificación del diseño de  la tabla de aprendizaje */
+
+     .tabla-aprendizaje::after{
+          display: none;
+     }
+
+     /* En el móvil tiene un espacio fijo al icono y los nombres */
+
+     .learning-card{
+          grid-template-columns: 80px 1fr;
+     }
+
+     /*------------------------------------ 
+          DOCK
+     --------------------------------------*/
+
+     /* El dock cabia de lado y pasa a la parte inferior de la pantalla */
+
+     .dock{
+          top: auto;
+          right: auto;
+          bottom: 12px;
+          left: 50%;
+          transform: translateX(-50%);
+     }
+
+     /* Los botones pasan de vertical a horizontal */
+
+     .dock ul{
+          flex-direction: row;
+          gap:2px;
+          background: rgba(11, 17, 24, 0.78);
+     }
+
+     /* Zona pulsable un poco más compacta */
+
+     .dock a{
+          width: 42px;
+          height: 42px;
+     }
+
+     /* Iconos más pequeños */
+
+     .dock img{
+          width: 24px;
+          height: 24px;
+     }
+
+     /*------------------------------------ 
+          NAVEGACIÓN INTERNA
+     --------------------------------------*/
+
+     /* Disminución de márgenes de scroll del escritorio */
+
+     #portfolio,
+     #stack,
+     #proyectos,
+     #contacto,
+     #calendario,
+     #proximamente{
+          scroll-margin-top: 24px;
+     }
+
+}
+
 /* ==================================================
    11. ACCESIBILIDAD / REDUCED MOTION
 ================================================== */
+
+     /*------------------------------------ 
+          NAVEGACIÓN ICON TECLADO
+     --------------------------------------*/
+
+     /* Indicador al navegar con teclado */
+
+     a:focus-visible,
+     button:focus-visible{
+          outline: 3px solid var(--acento);
+          outline-offset: 4px;
+     }
+
+     /*------------------------------------ 
+          REDUCED MOTION
+     --------------------------------------*/
+
+     /* Respeta la preferencia del sistema de reducir
+     animacones y movimientos */
+
+     @media( prefers-reduced-motion: reduce ){
+
+          /* El desplazamiento entre secciones deja de ser suave */
+          html {
+               scroll-behavior: auto;
+          }
+
+          /* Para las animaciones de calendario */
+
+          .timeline-years > span:nth-last-of-type,
+          .timeline-hoy{
+               animation: none;
+          }
+
+          /* Elimina las transiciones decorativas */
+          .stack-card,
+          .project-laVitrina,
+          .project-actions a,
+          .project-actions button,
+          .dock a,
+          .dock img{
+               transition: none;
+          }
+
+          /* Evita movimientos y escalados decorativos */
+
+          .stack-card:hover,
+          .project-actions a:hover,
+          .project-actions button:hover,
+          .img-1:hover,
+          .grupos-intermedio .learning-card:hover,
+          .grupos-basico .learning-card:hover,
+          .grupos-hoja-ruta .learning-card:hover,
+          .dock a:hover{
+               transform: none;
+          }
+     }
+     
+     /*------------------------------------ 
+          SALTAR CONTENIDO PRINCIPAL
+     --------------------------------------*/
+
+     /* Enlace oculto visualmente hasta recibir el foco */
+     .skip-link{
+          position: fixed;
+          top: -100px;
+          left: 16px;
+          z-index: 9999;
+          padding: 10px 16px;
+          color: var(--fondo-principal);
+          background: var(--acento);
+          border-radius: 8px;
+          font-weight: 600;
+          text-decoration: none;
+     }
+
+     /* Aparece cuando se navega con teclado */
+     
+     .skip-link:focus-visible{
+          top: 16px;
+     }
 

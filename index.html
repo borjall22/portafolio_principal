@@ -11,13 +11,16 @@
 
     </head>
     <body>
+        <a class="skip-link" href="#portfolio">
+            Saltar al contenido principal
+        </a>
 
         <!-- Dock lateral -->
 
-        <nav class="dock">
+        <nav class="dock" aria-label="Navegación principal">
             <ul>
                 <li>
-                    <a href="#portfolio" aria-label="Perfil">
+                    <a href="#perfil" aria-label="Perfil">
                         <img
                         src="img/icon/cv-icon.webp"
                         alt="">
@@ -52,7 +55,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#proximamente" aria-label="Próximamente">
+                    <a href="#proximamente" aria-label="Mi aprendizaje">
                         <img
                         src="img/icon/coming-soon-icon.webp"
                         alt="">
@@ -70,7 +73,8 @@
                     <div class="pantalla-transicion" id="pantallaTransicion">
 
                 <div class="portfolio-intro"
-                    id="portfolio">
+                    id="portfolio"
+                    tabindex="-1">
 
                 <!-- Biografia -->
 
@@ -302,22 +306,31 @@
                         </p>
                         <div class="contac-links">
 
-                            <a class="img-1" href="mailto:borjalljose@gmail.com">
-                                <img class="icon-contact"
-                                src="img/icon/gmail-icon.webp"
-                                alt="">
+                            <a class="img-1" 
+                                href="mailto:borjalljose@gmail.com"
+                                aria-label="Enviar correo electrónico"
+                                >
+                                    <img class="icon-contact"
+                                    src="img/icon/gmail-icon.webp"
+                                    alt="">
                             </a>
 
-                            <a class="img-1" href="https://www.linkedin.com/in/borja-lopez-963103434/">
-                                <img class="icon-contact"
-                                src="img/stack/linkedin-icon.webp"
-                                alt="">
+                            <a class="img-1" 
+                                href="https://www.linkedin.com/in/borja-lopez-963103434/"
+                                aria-label="Ver perfil de LinkedIn"
+                                >
+                                    <img class="icon-contact"
+                                    src="img/stack/linkedin-icon.webp"
+                                    alt="">
                             </a>
 
-                            <a class="img-1" href="https://wa.me/34638276779">
-                                <img class="icon-contact"
-                                src="img/icon/whatsapp-icon.webp"
-                                alt="">
+                            <a class="img-1" 
+                                href="https://wa.me/34638276779"
+                                aria-label="Contactar por WhatsApp"
+                                >
+                                    <img class="icon-contact"
+                                    src="img/icon/whatsapp-icon.webp"
+                                    alt="">
                             </a>
 
                         </div>
