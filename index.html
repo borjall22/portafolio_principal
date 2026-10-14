@@ -6,6 +6,7 @@
         <meta name ="description" content="Esta página es el portfolio personal de Borja.">
         <link href="css/portfolio.css" rel="stylesheet">
         <link href="css/hero.css" rel="stylesheet">
+        <script src="js/main.js" defer></script>
 
         <title>Portafolio</title>
 
@@ -260,38 +261,164 @@
                         id="proyectos"
                     >
                         <h2>Proyectos</h2>
+
                             <div class="project-general">
+
                                 <article>
-                                    <div class="project-laVitrina">
-                                        <img class="img-lavitrina"
+
+                                    <div class="project-card">
+
+                                        <!-- Captura del proyecto -->
+
+                                        <img class="project-image"
                                         src="img/project/laVitrina.webp"
                                         alt="Vista previa del proyecto LaVitrina"
                                         >
-                                        <h3 class="title-lavitrina">LaVitrina</h3>
-                                        <p class="text-lavitrina">
+
+                                        <!-- Título -->
+
+                                        <h3 class="project-title">LaVitrina</h3>
+
+                                        <!-- Descripción corta -->
+
+                                        <p class="project-text descripcion-corta">
                                             LaVitrina es una web para organizar tus colecciones
                                             y conectar con personas que comparten tus mismos gustos.
                                         </p>
-                                        <div class="project-actions">
-                                            <a href="https://borjall22.github.io/La-Vitrina/" aria-label="Visitar la web de LaVitrina">
-                                                <img
-                                                src="img/icon/web-icon.webp"
-                                                alt="">
+
+                                        <!-- Descripción larga -->
+
+                                        <div
+                                            class="project-details"
+                                            id="lavitrina-details"
+                                            hidden>
+
+                                            <div class="descripcion-larga">
+
+                                                <p>
+                                                    LaVitrina es una plataforma social para coleccionistas que permite
+                                                    organizar colecciones, controlar el progreso, gestionar duplicados
+                                                    y realizar búsquedas avanzadas.
+                                                </p>
+
+                                                <p>
+                                                    Incorpora perfiles públicos, sistema de amistades, mensajería en
+                                                    tiempo real y herramientas para descubrir y contactar con otros
+                                                    coleccionistas. También cuenta con un panel de administración propio
+                                                    para gestionar colecciones, usuarios, imágenes y estadísticas.
+                                                </p>
+
+                                                <p>
+                                                    Desarrollada con JavaScript, HTML y CSS, utiliza autenticación,
+                                                    PostgreSQL, almacenamiento y comunicación en tiempo real.
+                                                    La infraestructura está autoalojada en una Raspberry Pi mediante
+                                                    Docker, utilizando Supabase Self-Hosted.
+                                                </p>
+
+                                            </div>
+                                        
+                                            <!-- Tecnologías utilizadas-->
+
+                                            <div
+                                                class="project-tech-groups"
+                                                aria-label="Tecnologías usadas en LaVitrina"
+                                            >
+                                                <div class="project-tech-group">
+
+                                                    <h4>Front-End</h4>
+
+                                                    <ul>
+                                                        <li>
+                                                            <img src="img/stack/html5-icon.webp" alt="">
+                                                            <span>HTML</span>
+                                                        </li>
+                                                        <li>
+                                                            <img src="img/stack/css-icon.webp" alt="">
+                                                            <span>CSS</span>
+                                                        </li>
+                                                        <li>
+                                                            <img src="img/stack/javascript-icon.webp" alt="">
+                                                            <span>JavaScript</span>
+                                                        </li>
+                                                    </ul>
+
+                                                </div>
+
+                                                <div class="project-tech-group">
+
+                                                    <h4>Backend y datos</h4>
+
+                                                    <ul>
+                                                        <li>
+                                                            <img src="img/stack/supabase-icon.webp" alt="">
+                                                            <span>Supabase</span>
+                                                        </li>
+                                                         <li>
+                                                            <img src="img/stack/postgresql-icon.webp" alt="">
+                                                            <span>PostgreSQL</span>
+                                                        </li>
+                                                    </ul>
+
+                                                </div>
+
+                                                <div class="project-tech-group">
+
+                                                    <h4>Infraestructura</h4>
+
+                                                    <ul>
+                                                         <li>
+                                                            <img src="img/stack/docker-icon.webp" alt="">
+                                                            <span>Docker</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Acciones del proyecto -->
+
+                                        <div class="project-actions" aria-label="Enlaces de LaVitrina">
+                                            <a 
+                                                href="https://borjall22.github.io/La-Vitrina/"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                aria-label="Visitar la web de LaVitrina">
+                                                    <img
+                                                    src="img/icon/web-icon.webp"
+                                                    alt="">
                                             </a>
-                                            <a href="https://github.com/borjall22/La-Vitrina" aria-label="Ver LaVitrina en GitHub">
-                                                <img
-                                                src="img/stack/github-icon.webp"
-                                                alt="">
+
+                                            <a 
+                                                href="https://github.com/borjall22/La-Vitrina" 
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                aria-label="Ver LaVitrina en GitHub">
+                                                    <img
+                                                    src="img/stack/github-icon.webp"
+                                                    alt="">
                                             </a>
-                                            <button type="button" aria-label="Ver más información sobre LaVitrina">
-                                                <img
-                                                src="img/icon/more-icon.webp"
-                                                alt="">
+
+                                            <button 
+                                                class="project-more"
+                                                type="button" 
+                                                aria-label="Ver más información sobre LaVitrina"
+                                                aria-expanded="false"
+                                                aria-controls="lavitrina-details"
+                                            >
+
+                                                    <img
+                                                    src="img/icon/more-icon.webp"
+                                                    alt="">
+
                                             </button>
                                         </div>
+
                                     </div>
+
                                 </article>
+
                             </div>
+
                     </section>
 
                     <!-- Contacto -->
@@ -375,7 +502,8 @@
                                 <div class="timeline-row">
                                     <span
                                         class="timeline-event-estudios"
-                                        style="--left: 16.7%; --width: 60.8%;">
+                                        style="--left: 16.7%; --width: 60.8%;"
+                                        title="DAM . 09/2024 - 06/2026">
                                         DAM
                                     </span>
                                 </div>
@@ -387,12 +515,14 @@
                                 <div class="timeline-row">
                                     <span
                                         class="timeline-event-certificados timeline-event-certificados-arriba"
-                                        style="--left: 90.35%;">
+                                        style="--left: 83.125%;"
+                                        title="Github . 08/2026">
                                          Git y GitHub
                                     </span>
                                     <span
                                         class="timeline-event-certificados timeline-event-certificados-abajo"
-                                        style="--left: 94.50%;">
+                                        style="--left: 86.875%;"
+                                        title="JavaScript Básico . 09/2026">
                                         JavaScript Básico
                                     </span>
                                 </div>
@@ -401,7 +531,8 @@
                                 <div class="timeline-row">
                                     <span
                                         class="timeline-event-trabajo"
-                                        style="--left: 50%; --width: 16.25%;">
+                                        style="--left: 50%; --width: 16.25%;"
+                                        title="Prácticas . 11/2025 - 03/2026">
                                         Prácticas
                                     </span>
                                 </div>

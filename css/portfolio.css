@@ -165,7 +165,7 @@
         margin: 0;
         color: var(--texto-principal);
         font-size: clamp(2.2rem, 5vw, 4.4rem);
-        line-height: 0.095;
+        line-height: 0.95;
         font-weight: 600;
         letter-spacing: -0.04em;
      }
@@ -296,7 +296,7 @@
           display: block;
           left: 0;
           right: 0;
-          margin-top: 18px;
+          margin-top: 36px;
           height: 1px;
           background: var(--borde-suave);
      }
@@ -318,16 +318,16 @@
 
      /* Tarjeta del proyecto º1 */
 
-     .project-laVitrina{
+     .project-card{
         display: grid;
         grid-template-columns: 
-            minmax(280px, 42%)
+            minmax(300px, 45%)
             minmax(0, 1fr)
             44px;
         grid-template-rows: auto auto;
         align-items: start;
-        gap: 22px;
-        padding: 18px;
+        gap: 16px;
+        padding: 14px;
         border: 1px solid var(--borde-suave);
         background: var(--fondo-tarjetas);
         box-shadow: 
@@ -342,11 +342,11 @@
 
      /* Imagen del proyecto */
 
-     .img-lavitrina{
+     .project-image{
         grid-column: 1;
         grid-row: 1 / span 2;
         width: 100%;
-        height: 238px;
+        height: 200px;
         display: block;
         object-fit: cover;
         object-position: top left;
@@ -360,7 +360,7 @@
 
      /* Nombre del proyecto */
 
-     .title-lavitrina{
+     .project-title{
         grid-column: 2;
         grid-row: 1;
         margin: 0;
@@ -373,7 +373,7 @@
 
      /* Descripcíon corta del proyecto */
 
-     .text-lavitrina{
+     .project-text{
         grid-column: 2;
         grid-row: 2;
         max-width: 58ch;
@@ -405,12 +405,16 @@
         display: grid;
         place-items: center;
         border: 0;
+        border-radius: 50%;
         color:var(--texto-principal);
         background: transparent;
         cursor: pointer;
+        outline: none;
         transition:
             transform 0.55s cubic-bezier(0.16, 1, 0.3, 1),
-            opacity 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+            opacity 0.55s cubic-bezier(0.16, 1, 0.3, 1),
+            background-color 0.3s ease,
+            box-shadow 0.3s ease;
      }
 
      /* Efecto al pasar el ratón por los botones */
@@ -427,6 +431,147 @@
           height: 27px;
           object-fit:  contain;
           filter: brightness(0) invert(1);
+     }
+
+     /* Foco accesible sin el cuadrado por defecto */
+     
+     .project-actions a:focus-visible,
+     .project-actions button:focus-visible{
+          box-shadow: 
+               0 0 0 2px rgba(164, 193, 202, 0.55);
+     }
+
+     /* Animación del botón más */
+
+     .project-actions img{
+          transition:
+               transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+               opacity 0.35s ease;
+     }
+
+     /* Estado abierto */
+     .project-more[aria-expanded="true"]{
+          background: rgba(164, 193, 202, 0.08);
+     }
+
+     .project-more[aria-expanded="true"] img{
+          transform: rotate(90deg);
+          opacity: 0.75;
+     }
+
+     /* Información extra del proyecto */
+
+     .project-details{
+          grid-column: 2;
+          grid-row: 2;
+          min-width: 0;
+          color: var(--texto-secundario);
+          font-size: 14px;
+          line-height: 1.6;
+     }
+
+     /* Descripción larga */
+
+     .descripcion-larga{
+          display: grid;
+          gap: 12px;
+     }
+
+     .descripcion-larga p{
+          max-width: 68ch;
+          margin: 0;
+     }
+
+     /*------------------------------------
+          Estado ampliado de LaVitrina
+     ------------------------------------*/
+
+     /* Oculta la descripción corta */
+
+     .project-card.is-expanded .descripcion-corta{
+          display: none;
+     }
+
+     /* La imagen acompaña la altura del contenido ampliado */
+
+     .project-card.is-expanded .project-image{
+          height: 100%;
+          min-height: 520px;
+     }
+
+     /* Párrafo de la información */
+     .project-details p{
+          max-width: 90ch;
+          margin: 0;
+     }
+
+     /*------------------------------------
+          Tecnologías utilizadas
+     ------------------------------------*/
+
+     .project-tech-groups{
+          display: grid;
+          grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+          margin-top: 22px;
+     }
+
+     /* Grupo idividual */
+
+     .project-tech-group{
+          padding: 14px;
+          border: 1px solid var(--borde-suave);
+          background: rgba(255, 255, 255, 0.02);
+     }
+
+     .project-tech-group:nth-child(1){
+          grid-column: 1;
+     }
+
+     .project-tech-group:nth-child(2){
+          grid-column: 2;
+     }
+
+     .project-tech-group:nth-child(3){
+          grid-column: 1 / -1;
+          width: 100%;
+          justify-self: stretch;
+     }
+
+     /* Título de cada grupo */
+
+     .project-tech-group h4{
+          margin: 0 0 12px;
+          color: var(--texto-principal);
+          font-size: 13px;
+          font-weight: 600;
+     }
+
+     /* Lista de tecnologías */
+
+     .project-tech-group ul {
+          display: grid;
+          gap: 10px;
+          margin: 0;
+          padding: 0;
+          list-style: none;
+     }
+
+     /* Cada tecnología */
+     .project-tech-group li {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          color: var(--texto-secundario);
+          font-size: 13px;
+     }
+
+     /* Iconos */
+
+     .project-tech-group img {
+          width: 24px;
+          height: 24px;
+          object-fit: contain;
+          flex: 0 0 auto;
      }
 
 
@@ -853,7 +998,6 @@
           position: absolute;
           left: var(--left);
           top: 50%;
-          transform: translate(-50%, -50%);
           padding-left: 13px;
           font-size: 10px;
           font-weight: 600;
@@ -863,13 +1007,11 @@
 
      .timeline-event-certificados-arriba{
           top: 12px;
-          transform: translateX(-50%);
      }
 
      .timeline-event-certificados-abajo{
-          top: auto;
+
           bottom: 12px;
-          transform: translateX(-50%);
      }
 
      .timeline-event-certificados::before{
@@ -909,7 +1051,7 @@
         margin: 0;
         color: var(--texto-principal);
         font-size: clamp(2.6rem, 6.6vw, 5.6rem);
-        line-height: 0.95;
+        line-height: 1;
         font-weight: 600;
         letter-spacing: -0.04em;
      }
@@ -1290,7 +1432,7 @@
 
      /* Modificas las tarjetas para que se vea mejor en vertical */
 
-     .project-laVitrina{
+     .project-card{
           grid-template-columns: 1fr;
           grid-template-rows: auto;
           gap: 16px;
@@ -1299,22 +1441,30 @@
 
      /* Imagen del proyecto */
 
-     .img-lavitrina{
+     .project-image{
           grid-column: 1;
           grid-row: 1;
           height: auto;
           aspect-ratio: 16 / 10;
      }
 
+     /* Diseño del proyecto LaVitrina en movil */
+
+     .project-card.is-expanded .project-image{
+          height: auto;
+          min-height: 0;
+          aspect-ratio: 16 / 10;
+     }
+
      /* Título debajo de la imagen */
 
-     .title-lavitrina{
+     .project-title{
           grid-column: 1;
           grid-row: 2;
      }
 
      /* Descripción debajo del título */
-     .text-lavitrina{
+     .project-text{
           grid-column: 1;
           grid-row: 3;
           max-width: none;
@@ -1326,6 +1476,84 @@
           grid-row: 4;
           flex-direction: row;
           justify-content: flex-start;
+          gap: 14px;
+          padding-top: 12px;
+          border-top: 1px solid var(--borde-suave);
+     }
+
+     /* Información apliada debajo de los botones */
+
+     .project-details{
+          grid-column: 1;
+          grid-row: 5;
+     }
+
+     /* Cuando LaVitrina está abierto,
+     la información aparece antes que los botones */
+
+     .project-card.is-expanded .project-details{
+          grid-row: 4;
+     }
+
+     /* Los botones pasan al final */
+
+     .project-card.is-expanded .project-actions{
+          grid-row: 5;
+     }
+
+     /* Animación al abrir los detalles */
+
+     .project-details{
+          animation: abrirDetalles 0.6s ease forwards;
+     }
+
+     /* Animación al cerrar */
+
+     .project-details.cerrando{
+          animation: cerrarDetalles 0.18s ease forwards;
+     }
+
+     /* La información aparece suavemente */
+
+     @keyframes abrirDetalles{
+          from{
+               opacity: 0;
+               transform: translateY(-10px);
+          }
+
+          to{
+               opacity: 1;
+               transform: translateY(0);
+          }
+     }
+
+     /* La información desaparece suavemente */
+
+     @keyframes cerrarDetalles{
+          from{
+               opacity: 1;
+               transform: translateY(0);
+          }
+
+          to{
+               opacity: 0;
+               transform: translateY(-10px);
+          }
+     }
+
+     /* Tecnología en una sola columna */
+     .project-tech-groups{
+          grid-template-columns: 1fr;
+          gap: 10px;
+     }
+
+     /* Coloca los grupos uno debajo del otro */
+
+     .project-tech-group:nth-child(1),
+     .project-tech-group:nth-child(2),
+     .project-tech-group:nth-child(3){
+          grid-column: 1;
+          width: auto;
      }
 
      /*------------------------------------ 
@@ -1492,7 +1720,7 @@
 
           /* Elimina las transiciones decorativas */
           .stack-card,
-          .project-laVitrina,
+          .project-card,
           .project-actions a,
           .project-actions button,
           .dock a,
